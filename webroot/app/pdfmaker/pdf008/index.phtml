@@ -1,0 +1,206 @@
+<style>
+	body {
+	    font-family:arial;
+	    font-size:10pt;
+	}
+	table td {
+	    width:7px;
+	}
+	table {
+	    border-collapse:collapse;
+	    border-spacing: 0px;
+	    font-size:9pt;
+	    width:700px
+	}
+	.td-border td,
+	.te_adicional th, 
+	.te_adicional td {
+	    border: 1px solid black;
+	    padding: 15px 7px;
+	}
+	.tr-title td {
+	    background-color:silver;
+	}
+	.my-table td {
+	    padding:3px;
+	    padding-bottom:6px;
+	    padding-top:1px;
+	    font-size:10pt;
+	}
+	hr { 
+	    display: block;
+	    margin-top: 0.4em;
+	    margin-bottom: 0.4em;
+	    margin-left: auto;
+	    margin-right: auto;
+	    border-style: inset;
+	    border-width: 2px;
+	}
+	img {
+	    width: 103px;
+	    height:87px;
+	    margin-top: 5px;
+	}
+</style>
+<?php
+function mask($val, $mask) {
+	$maskared = '';
+	$k = 0;
+	for ($i = 0; $i<=strlen($mask)-1; $i++) {
+		if ($mask[$i] == '#') {
+			if(isset($val[$k]))
+				$maskared .= $val[$k++];
+		} else {
+			if (isset($mask[$i]))
+				$maskared .= $mask[$i];
+		}
+	}
+	return $maskared;
+}
+?>
+<div style="width:100%;height:5px;">
+	<table style="table-layout: fixed;width:100%;">
+		<tr>
+			<td>
+				<center>
+					<img src="resources/logo002.png">
+				</center>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size:15pt;">
+				<b>
+					<center>FICHA DE LOTE</center>
+				</b>
+			</td>
+		</tr>
+	</table>
+</div>
+<div style="background-color:#F60;width:100%;height:5px;"></div>
+<br>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">ARMAZEN AZ1</span></td>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Lote: </span><?= $this->LOTE_ID ?></td>
+		<?php
+			date_default_timezone_set('America/Sao_Paulo');
+			$data_atual = date('d/m/Y H:i:s');
+		?>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Data Impressão da Ficha: </span><?= $data_atual ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="45"><span style="font-weight:bold;">Beneficiário</span></td>
+		<td colspan="45"><span style="font-weight:bold;">CNPJ</span></td>
+	</tr>
+	<tr>
+		<td colspan="45"><?= $this->cliente ?></td>
+		<?php
+			$cnpj = $this->cnpj;
+			$cnpj = mask($cnpj, '##.###.###/####-##');
+		?>
+		<td colspan="45"><?= $cnpj ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="25"><span style="font-weight:bold;">Documento</span></td>
+		<td colspan="25"><span style="font-weight:bold;">Número</span></td>
+		<td colspan="25"><span style="font-weight:bold;">Procedência</span></td>
+		<td colspan="25"><span style="font-weight:bold;">Regime</span></td>
+	</tr>
+	<tr>
+		<td colspan="25"><?= $this->tipo_documento ?></td>
+		<td colspan="25"><?= $this->numero_documento ?></td>
+		<td colspan="25"><?= $this->proc_id ?></td>
+		<td colspan="25"><?= $this->reg_nome ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">Conhecimento</span></td>
+		<td colspan="35"><span style="font-weight:bold;">Espécie</span></td>
+		<td colspan="35"><span style="font-weight:bold;">Saldo</span></td>
+	</tr>
+	<tr>
+		<td colspan="35"><?= $this->conhec_nome . " " . $this->conhecimento  ?></td>
+		<td colspan="35"><?= $this->especie ?></td>
+		<td colspan="35"><?= $this->latu_qt_saldo  . " Vo" ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="20"><span style="font-weight:bold;">Data de Entrada</span></td>
+		<td colspan="20"><span style="font-weight:bold;">Data de Vencto</span></td>
+		<td colspan="20"><span style="font-weight:bold;">Peso Bruto</span></td>
+		<td colspan="20"><span style="font-weight:bold;">M3</span></td>
+		<td colspan="20"><span style="font-weight:bold;">M2</span></td>
+	</tr>
+	<tr>
+		<?php
+			if ($this->cesv_dt_entrada) {
+				$dataHora = implode("/", explode("-", $this->cesv_dt_entrada ));
+				$dataHora = explode(" ", $dataHora);
+				$formato = array_reverse(explode("/", $dataHora[0]));
+				$hora = explode(".", $dataHora[1]);	
+				$data = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];		
+			}
+		?>
+		<td colspan="20"><?= $data ?></td>
+		<td colspan="20"><?= $this->vencimento ?></td>
+		<td colspan="20"><?= $this->peso_bruto . " Kg" ?></td>
+		<td colspan="20"><?= $this->latu_m3_saldo . " Kg" ?></td>
+		<td colspan="20"><?= $this->latu_m2_saldo . " Kg" ?></td>
+	</tr>
+</table>
+
+<div style="background-color:#A9A9A9; width:100%; margin-top:15px; margin-bottom:15px;">
+	<h3 align="center">Termo de Avarias - Lote</h3>
+</div>
+<?php $cont = 0; ?>
+<?php foreach ($this->teste as $i => $item) { ?>
+	<table style="table-layout:fixed;width:100%;">
+		<tr>
+			<td colspan="35"><span style="font-weight:bold;">Termo No</span></td>
+			<td colspan="35"><span style="font-weight:bold;">Espécie</span></td>
+			<td colspan="35"><span style="font-weight:bold;">Qtde Avariada</span></td>
+		</tr>
+		<tr>
+			<td colspan="35"><?= $this->LOTE_TFA[$cont]['TER_ID'] ?></td>
+			
+			<td colspan="35"><?= $item[0]['ESP_ID'] ?></td>
+			<td colspan="35"><?= $item[0]['TAS_QTD'] ?></td>
+		</tr>
+	</table>
+	<table style="table-layout:fixed;width:100%;">
+		<tr>
+			<td colspan="100"><span style="font-weight:bold;">Descrição de Avaria</span></td>
+		</tr>
+		<tr>
+			<td colspan="10">
+				<?php $desc_avarias = $this->desc_avarias; ?>
+				<?php if ($desc_avarias[$i]['tas_id'] == $item[0]['TAS_ID']) { ?>
+					<?php echo $desc_avarias[$i]['tas_id'] . ' ) '; ?>
+					<?php foreach ($desc_avarias[$i]['desc_avarias'] as $desc_avaria) { ?>
+						<?php echo $desc_avaria['AVA_DESCRICAO'] . ', '; ?>
+					<?php } ?>
+				<?php } ?>
+			</td>
+		</tr>
+	</table>
+	<table style="table-layout:fixed;width:100%;">
+		<tr>
+			<td colspan="100"><span style="font-weight:bold;">Descrição da Carga</span></td>
+		</tr>
+		<tr>
+			<td colspan="100"><?= $this->DESC_CARGA[$i]['LITEM_DESCRICAO'] ?></td>
+			<?php $cont++; ?>
+		</tr>
+	</table>
+	<hr>
+<?php } ?>

@@ -1,0 +1,40 @@
+.main-class.documentacao-entrada {
+
+    .mercadoria-itens .copy-mercadorias {
+        
+        .item-mercadoria {
+            overflow-x: auto;
+            display: flex;
+
+            label {
+                display: none;
+            }
+
+            .input {
+                margin-bottom: 8px; 
+                margin-top: 8px; 
+            }
+        }
+    }
+
+    .no-padding-right {
+        padding-right: 0px;
+    }
+
+    .no-padding-left {
+        padding-left: 0px;
+    }
+
+    .yes-margin-top {
+        margin-top: 25px;
+    }
+
+    .width-auto {
+        width: auto;
+    }
+
+    .container-lacre-add, .container-novo {
+        background-color: $background;
+    }
+
+}

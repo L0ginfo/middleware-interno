@@ -1,0 +1,1705 @@
+
+<EMAIL@ADDRESS>
+
+, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-12-09 16:03-0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "The aco has been saved."
+msgstr ""
+
+msgid "The aco could not be saved. Please, try again."
+msgstr ""
+
+msgid "The aco has been deleted."
+msgstr ""
+
+msgid "The aco ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The aros aco has been saved."
+msgstr ""
+
+msgid "The aros aco could not be saved. Please, try again."
+msgstr ""
+
+msgid "The aros aco has been deleted."
+msgstr ""
+
+msgid "The aros aco ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The aro has been saved."
+msgstr ""
+
+msgid "The aro could not be saved. Please, try again."
+msgstr ""
+
+msgid "The aro has been deleted."
+msgstr ""
+
+msgid "The aro ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The caracteristica has been saved."
+msgstr "A caracteristica foi salva."
+
+msgid "The caracteristica could not be saved. Please, try again."
+msgstr "A caracteristica não foi salva."
+
+msgid "The caracteristica has been deleted."
+msgstr "A caracteristica foi removida."
+
+msgid "The caracteristica ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A caracteristica não foi removida."
+
+msgid "The caracteristicas produto has been saved."
+msgstr "A caracteristica do produto foi salva."
+
+msgid "The caracteristicas produto could not be saved. Please, try again."
+msgstr "A caracteristica do produto não foi salva."
+
+msgid "The caracteristicas produto has been deleted."
+msgstr "A caracteristica do produto foi removida."
+
+msgid "The caracteristicas produto ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A caracteristica do produto não foi removida."
+
+msgid "The categoria empresa has been saved."
+msgstr "A categoria foi salva."
+
+msgid "The categoria empresa could not be saved. Please, try again."
+msgstr "A categoria não foi salva."
+
+msgid "The categoria empresa has been deleted."
+msgstr "A categoria foi removida."
+
+msgid "The categoria empresa ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A categoria não foi removida."
+
+msgid "The categoria empresas representante has been saved."
+msgstr ""
+
+msgid "The categoria empresas representante could not be saved. Please, try again."
+msgstr ""
+
+msgid "The categoria empresas representante has been deleted."
+msgstr ""
+
+msgid "The categoria empresas representante ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The cliente has been saved."
+msgstr "O cliente foi salvo."
+
+msgid "The cliente could not be saved. Please, try again."
+msgstr "O cliente não foi salvo."
+
+msgid "The cliente has been deleted."
+msgstr "O cliente foi removido."
+
+msgid "The cliente ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O cliente não foi removido."
+
+msgid "The condicao pagamento has been saved."
+msgstr "A condição de pagamento foi salva."
+
+msgid "The condicao pagamento could not be saved. Please, try again."
+msgstr "A condição de pagamento não foi salva."
+
+msgid "The condicao pagamento has been deleted."
+msgstr "A condição de pagamento foi removida."
+
+msgid "The condicao pagamento ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A condição de pagamento não foi salva."
+
+msgid "The contato has been saved."
+msgstr "O contato foi salvo."
+
+msgid "The contato could not be saved. Please, try again."
+msgstr "O contato não foi salvo."
+
+msgid "The contato has been deleted."
+msgstr "O contato foi removido."
+
+msgid "The contato ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O contato não foi removido."
+
+msgid "The endereco has been saved."
+msgstr "O endereço foi salvo."
+
+msgid "The endereco could not be saved. Please, try again."
+msgstr "O endereço não foi salvo."
+
+msgid "The endereco has been deleted."
+msgstr "O endereço foi removido."
+
+msgid "The endereco ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O endereço não foi removido."
+
+msgid "The log has been saved."
+msgstr ""
+
+msgid "The log could not be saved. Please, try again."
+msgstr ""
+
+msgid "The log has been deleted."
+msgstr ""
+
+msgid "The log ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The pedido produto has been saved."
+msgstr "O produto do pedido foi salvo."
+
+msgid "The pedido produto has been updated."
+msgstr "O produto do pedido foi atualizado."
+
+msgid "The pedido produto could not be saved. Please, try again."
+msgstr "O produto do pedido não foi salvo."
+
+msgid "The pedido produto has been deleted."
+msgstr "O produto do pedido foi removido."
+
+msgid "The pedido produto ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O produto do pedido não foi removido."
+
+msgid "The pedido troca has been saved."
+msgstr "A troca do pedido foi salva."
+
+msgid "The pedido troca could not be saved. Please, try again."
+msgstr "A troca do pedido não foi salva."
+
+msgid "The pedido troca has been deleted."
+msgstr "A troca do pedido foi removida."
+
+msgid "The pedido troca ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A troca do pedido não foi removida."
+
+msgid "The pedido has been saved."
+msgstr "O pedido foi salvo."
+
+msgid "The pedido could not be saved. Please, try again."
+msgstr "O pedido não foi salvo."
+
+msgid "The pedido has been deleted."
+msgstr "O pedido foi removido."
+
+msgid "The pedido ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O pedido não foi removido."
+
+msgid "The possui sessao has been saved."
+msgstr ""
+
+msgid "The possui sessao could not be saved. Please, try again."
+msgstr ""
+
+msgid "The possui sessao has been deleted."
+msgstr ""
+
+msgid "The possui sessao ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The produto has been saved."
+msgstr "O produto foi salvo."
+
+msgid "The produto could not be saved. Please, try again."
+msgstr "O produto não foi salvo."
+
+msgid "The produto has been deleted."
+msgstr "O produto foi removido."
+
+msgid "The produto ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O produto não foi removido."
+
+msgid "The regiao has been saved."
+msgstr "A região foi salva."
+
+msgid "The regiao could not be saved. Please, try again."
+msgstr "A região não foi salva."
+
+msgid "The regiao has been deleted."
+msgstr "A região foi removida."
+
+msgid "The regiao ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A região não foi removida."
+
+msgid "The regioes representante has been saved."
+msgstr "O representante da região foi salvo."
+
+msgid "The regioes representante could not be saved. Please, try again."
+msgstr "O representante da região não foi salvo."
+
+msgid "The regioes representante has been deleted."
+msgstr "O representante da região foi removido."
+
+msgid "The regioes representante ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O representante da região não foi removido."
+
+msgid "The responsavel sessao has been saved."
+msgstr ""
+
+msgid "The responsavel sessao could not be saved. Please, try again."
+msgstr ""
+
+msgid "The responsavel sessao has been deleted."
+msgstr ""
+
+msgid "The responsavel sessao ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "The sessao has been saved."
+msgstr "A sessão foi salva."
+
+msgid "The sessao could not be saved. Please, try again."
+msgstr "A sessão não foi salva."
+
+msgid "The sessao has been deleted."
+msgstr "A sessão foi removida."
+
+msgid "The sessao ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A sessão não foi removida."
+
+msgid "The tabela preco has been saved."
+msgstr "A tabela de preço foi salva."
+
+msgid "The tabela preco could not be saved. Please, try again."
+msgstr "A tabela de preço não foi salva."
+
+msgid "The tabela preco has been deleted."
+msgstr "A tabela de preço foi removida."
+
+msgid "The tabela preco ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "A tabela de preço não foi removida."
+
+msgid "The tipo contato has been saved."
+msgstr "O tipo de contato foi salvo."
+
+msgid "The tipo contato could not be saved. Please, try again."
+msgstr "O tipo de contato não foi salvo."
+
+msgid "The tipo contato has been deleted."
+msgstr "O tipo de contato foi removido."
+
+msgid "The tipo contato ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O tipo de contato não foi removido."
+
+msgid "The usuario grupo has been saved."
+msgstr "O grupo de usuário foi salvo."
+
+msgid "The usuario grupo could not be saved. Please, try again."
+msgstr "O grupo de usuário não foi salvo."
+
+msgid "The usuario grupo has been deleted."
+msgstr "O grupo de usuário foi removido."
+
+msgid "The usuario grupo ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O grupo de usuário não foi salvo."
+
+msgid "The usuario has been saved."
+msgstr "O usuário foi salvo."
+
+msgid "The usuario could not be saved. Please, try again."
+msgstr "O usuário não foi salvo."
+
+msgid "The usuario has been deleted."
+msgstr "O usuário foi removido."
+
+msgid "The usuario ') . ' ' . __('could not be deleted. Please, try again."
+msgstr "O usuário não foi removido."
+
+msgid "Sua conta está ativa, faça login abaixo"
+msgstr ""
+
+msgid "could not be saved. Please, try again."
+msgstr "não pode ser salvo, tente novamente."
+
+msgid "Registro inválido!"
+msgstr ""
+
+msgid "The user has been saved"
+msgstr ""
+
+msgid "Siga as instruções que foram enviadas ao seu e-mail, obrigado!"
+msgstr ""
+
+msgid "Erro: E-mail não enviado!"
+msgstr ""
+
+msgid "E-mail não encontrado!"
+msgstr ""
+
+msgid "Username or password is incorrect"
+msgstr "Usuário ou senha incorretos"
+
+msgid "The valor caracteristica has been saved."
+msgstr ""
+
+msgid "The valor caracteristica could not be saved. Please, try again."
+msgstr ""
+
+msgid "The valor caracteristica has been deleted."
+msgstr ""
+
+msgid "The valor caracteristica ') . ' ' . __('could not be deleted. Please, try again."
+msgstr ""
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "List Acos"
+msgstr ""
+
+msgid "List Parent Acos"
+msgstr ""
+
+msgid "New Parent Aco"
+msgstr ""
+
+msgid "List Aros"
+msgstr ""
+
+msgid "New Aro"
+msgstr ""
+
+msgid "Add Aco"
+msgstr ""
+
+msgid "Submit"
+msgstr "Salvar"
+
+msgid "Delete"
+msgstr "Remover"
+
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Você tem certeza que deseja excluir #{0} ?"
+
+msgid "Edit Aco"
+msgstr ""
+
+msgid "New Aco"
+msgstr ""
+
+msgid "Acos"
+msgstr ""
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "previous"
+msgstr "Anterior"
+
+msgid "next"
+msgstr "Próximo"
+
+msgid "Delete Aco"
+msgstr ""
+
+msgid "Parent Aco"
+msgstr ""
+
+msgid "Model"
+msgstr ""
+
+msgid "Alias"
+msgstr ""
+
+msgid "Id"
+msgstr ""
+
+msgid "Foreign Key"
+msgstr ""
+
+msgid "Lft"
+msgstr ""
+
+msgid "Rght"
+msgstr ""
+
+msgid "Related Acos"
+msgstr ""
+
+msgid "Parent Id"
+msgstr ""
+
+msgid "Related Aros"
+msgstr ""
+
+msgid "List Parent Aros"
+msgstr ""
+
+msgid "New Parent Aro"
+msgstr ""
+
+msgid "Add Aro"
+msgstr ""
+
+msgid "Edit Aro"
+msgstr ""
+
+msgid "Aros"
+msgstr ""
+
+msgid "Delete Aro"
+msgstr ""
+
+msgid "Parent Aro"
+msgstr ""
+
+msgid "List Aros Acos"
+msgstr ""
+
+msgid "Add Aros Aco"
+msgstr ""
+
+msgid "Edit Aros Aco"
+msgstr ""
+
+msgid "New Aros Aco"
+msgstr ""
+
+msgid "Aros Acos"
+msgstr ""
+
+msgid "Delete Aros Aco"
+msgstr ""
+
+msgid "Aro"
+msgstr ""
+
+msgid "Aco"
+msgstr ""
+
+msgid " Create"
+msgstr ""
+
+msgid " Read"
+msgstr ""
+
+msgid " Update"
+msgstr ""
+
+msgid " Delete"
+msgstr ""
+
+msgid "Caracteristicas"
+msgstr "Características"
+
+msgid "Add Caracteristica"
+msgstr "Adicionar característica"
+
+msgid "List Caracteristicas"
+msgstr "Listar características"
+
+msgid "Salvar"
+msgstr ""
+
+msgid "Edit Caracteristica"
+msgstr "Editar característica"
+
+msgid "Ações"
+msgstr ""
+
+msgid "New Caracteristica"
+msgstr "Nova característica"
+
+msgid "Salvar edição"
+msgstr ""
+
+msgid "View Caracteristica"
+msgstr "Ver característica"
+
+msgid "Nome"
+msgstr ""
+
+msgid "Sessao"
+msgstr "Sessão"
+
+msgid "Descricao"
+msgstr "Descrição"
+
+msgid "Areas"
+msgstr "Áreas"
+
+msgid "Area"
+msgstr "Área"
+
+msgid "Created By"
+msgstr "Criado por"
+
+msgid "Modified By"
+msgstr "Modificado por"
+
+msgid "Created"
+msgstr "Criado em"
+
+msgid "Modified"
+msgstr "Modificado"
+
+msgid "Valores"
+msgstr ""
+
+msgid "Produtos"
+msgstr ""
+
+msgid "Novo valor"
+msgstr ""
+
+msgid "Código"
+msgstr ""
+
+msgid "Valor"
+msgstr ""
+
+msgid "Caracteristicas Produtos"
+msgstr "Características do produto"
+
+msgid "Add Caracteristicas Produto"
+msgstr "Adicionar características ao produto"
+
+msgid "List Caracteristicas Produtos"
+msgstr ""
+
+msgid "Edit Caracteristicas Produto"
+msgstr ""
+
+msgid "New Caracteristicas Produto"
+msgstr ""
+
+msgid "View Caracteristicas Produto"
+msgstr "Ver característica do produto"
+
+msgid "Caracteristica"
+msgstr "Característica"
+
+msgid "Produto"
+msgstr ""
+
+msgid "Categoria Empresas"
+msgstr "Categoria"
+
+msgid "Add Categoria Empresa"
+msgstr "Adicionar categoria"
+
+msgid "List Categoria Empresas"
+msgstr "Listar categorias"
+
+msgid "Edit Categoria Empresa"
+msgstr "Editar categoria"
+
+msgid "New Categoria Empresa"
+msgstr "Nova categoria"
+
+msgid "View Categoria Empresa"
+msgstr "Ver categoria"
+
+msgid "Categoria Empresas Representantes"
+msgstr ""
+
+msgid "Add Categoria Empresas Representante"
+msgstr ""
+
+msgid "List Categoria Empresas Representantes"
+msgstr ""
+
+msgid "Edit Categoria Empresas Representante"
+msgstr ""
+
+msgid "New Categoria Empresas Representante"
+msgstr ""
+
+msgid "View Categoria Empresas Representante"
+msgstr "Ver categoria da empresa do representante"
+
+msgid "Categoria Empresa"
+msgstr "Categoria"
+
+msgid "Usuario"
+msgstr "Usuário"
+
+msgid "Clientes"
+msgstr ""
+
+msgid "Add Cliente"
+msgstr "Adicionar cliente"
+
+msgid "List Clientes"
+msgstr "Listar clientes"
+
+msgid "Edit Cliente"
+msgstr "Editar cliente"
+
+msgid "New Cliente"
+msgstr "Novo cliente"
+
+msgid "View Cliente"
+msgstr "Ver cliente"
+
+msgid "Codigo"
+msgstr "Código"
+
+msgid "cnpj"
+msgstr "CNPJ"
+
+msgid "Regiao"
+msgstr "Região"
+
+msgid "Status"
+msgstr ""
+
+msgid "Informacoes"
+msgstr "Informações"
+
+msgid "Condicao Pagamentos"
+msgstr "Condições de pagamentos"
+
+msgid "Add Condicao Pagamento"
+msgstr "Adicionar condição de pgto"
+
+msgid "List Condicao Pagamentos"
+msgstr "Listar condição de pgto"
+
+msgid "Edit Condicao Pagamento"
+msgstr "Editar condição de pgto"
+
+msgid "New Condicao Pagamento"
+msgstr "Nova condição de pgto"
+
+msgid "View Condicao Pagamento"
+msgstr "Ver condição de pgto"
+
+msgid "Contatos"
+msgstr ""
+
+msgid "Add Contato"
+msgstr "Adicionar contato"
+
+msgid "List Contatos"
+msgstr "Listar contatos"
+
+msgid "Edit Contato"
+msgstr "Editar contato"
+
+msgid "New Contato"
+msgstr "Novo contato"
+
+msgid "View Contato"
+msgstr "Ver contato"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Telefone"
+msgstr ""
+
+msgid "Cliente"
+msgstr ""
+
+msgid "Tipo Contato"
+msgstr "Tipo de contato"
+
+msgid "Enderecos"
+msgstr "Endereços"
+
+msgid "Add Endereco"
+msgstr "Adicionar endereço"
+
+msgid "List Enderecos"
+msgstr "Listar endereços"
+
+msgid "Edit Endereco"
+msgstr "Editar endereço"
+
+msgid "New Endereco"
+msgstr "Novo endereço"
+
+msgid "View Endereco"
+msgstr "Ver endereço"
+
+msgid "UF"
+msgstr ""
+
+msgid "Cidade"
+msgstr ""
+
+msgid "Bairro"
+msgstr ""
+
+msgid "Rua"
+msgstr ""
+
+msgid "Numero"
+msgstr "Número"
+
+msgid "Complemento"
+msgstr ""
+
+msgid "Endereco Entrega"
+msgstr "Endereço de entrega"
+
+msgid "Marcos Móveis"
+msgstr ""
+
+msgid "Meus dados"
+msgstr ""
+
+msgid "Configurações"
+msgstr ""
+
+msgid "Sair"
+msgstr ""
+
+msgid "Início"
+msgstr ""
+
+msgid "Acesso"
+msgstr ""
+
+msgid "Usuários"
+msgstr ""
+
+msgid "Grupo Usuários"
+msgstr "Grupo de usuários"
+
+msgid "Relacionamento"
+msgstr ""
+
+msgid "Categorias"
+msgstr ""
+
+msgid "Endereços"
+msgstr ""
+
+msgid "Regiões"
+msgstr ""
+
+msgid "Tipos de contatos"
+msgstr ""
+
+msgid "Venda"
+msgstr ""
+
+msgid "Pedidos"
+msgstr ""
+
+msgid "Condições de Pagamento"
+msgstr ""
+
+msgid "Tabela de preços"
+msgstr ""
+
+msgid "Trocas"
+msgstr ""
+
+msgid "Manufatura"
+msgstr ""
+
+msgid "Características"
+msgstr ""
+
+msgid "Sessões"
+msgstr ""
+
+msgid "Logs"
+msgstr ""
+
+msgid "Add Log"
+msgstr "Adicionar Log"
+
+msgid "List Logs"
+msgstr "Lista Logs"
+
+msgid "Edit Log"
+msgstr "Editar Log"
+
+msgid "New Log"
+msgstr "Novo Log"
+
+msgid "View Log"
+msgstr "Ver log"
+
+msgid "Controller"
+msgstr "Controlador"
+
+msgid "Action"
+msgstr "Ação"
+
+msgid "Params"
+msgstr "Parametros"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Url"
+msgstr "URL"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Add Pedido Produto"
+msgstr "Adicionar produto ao pedido"
+
+msgid "Edit Pedido Produto"
+msgstr "Editar produto do pedido"
+
+msgid "Pedido Produtos"
+msgstr ""
+
+msgid "New Pedido Produto"
+msgstr "Novo Pedido de Produto"
+
+msgid "View Pedido Produto"
+msgstr "Ver produto do pedido"
+
+msgid "List Pedido Produtos"
+msgstr "Lista de Pedido Produtos"
+
+msgid "Valor Negociado"
+msgstr "Valor de Negociado"
+
+msgid "Promocao"
+msgstr "Promoção"
+
+msgid "Valor Desconto"
+msgstr "Valor de desconto"
+
+msgid "Pedido Trocas"
+msgstr "Pedido de troca"
+
+msgid "Add Pedido Troca"
+msgstr "Adicionar pedido de troca"
+
+msgid "List Pedido Trocas"
+msgstr "Listar pedidos de trocas"
+
+msgid "Edit Pedido Troca"
+msgstr "Editar pedido de troca"
+
+msgid "New Pedido Troca"
+msgstr "Novo pedido de troca"
+
+msgid "View Pedido Troca"
+msgstr "Ver pedido de troca"
+
+msgid "Pedido Produto"
+msgstr "Pedido de Produto"
+
+msgid "Add Pedido"
+msgstr "Adicionar Pedido"
+
+msgid "List Pedidos"
+msgstr "Listar pedidos"
+
+msgid "Edit Pedido"
+msgstr "Editar pedido"
+
+msgid "New Pedido"
+msgstr "Novo pedido"
+
+msgid "Condição de Pagamentos"
+msgstr ""
+
+msgid "Escolha"
+msgstr ""
+
+msgid "View Pedido"
+msgstr "Ver pedido"
+
+msgid "Contato"
+msgstr ""
+
+msgid "Condicao Pagamento"
+msgstr "Condição de pagamento"
+
+msgid "Data Pedido"
+msgstr "Data do pedido"
+
+msgid "Transporte"
+msgstr ""
+
+msgid "Transportadora"
+msgstr ""
+
+msgid "Representante"
+msgstr ""
+
+msgid "Numero Ordem Compras Cliente"
+msgstr "Nº ordem de serviço do cliente"
+
+msgid "Preco Base"
+msgstr "Preço base"
+
+msgid "Observacao"
+msgstr "Observação"
+
+msgid "Novo produto"
+msgstr ""
+
+msgid "Possui Sessoes"
+msgstr ""
+
+msgid "Add Possui Sessao"
+msgstr ""
+
+msgid "List Possui Sessoes"
+msgstr ""
+
+msgid "Edit Possui Sessao"
+msgstr ""
+
+msgid "New Possui Sessao"
+msgstr ""
+
+msgid "View Possui Sessao"
+msgstr ""
+
+msgid "Add Produto"
+msgstr "Adicionar produto"
+
+msgid "List Produtos"
+msgstr "Listar produtos"
+
+msgid "Edit Produto"
+msgstr "Editar produto"
+
+msgid "New Produto"
+msgstr "Novo produto"
+
+msgid "Categoria"
+msgstr ""
+
+msgid "View Produto"
+msgstr "Ver produto"
+
+msgid "Brinde Produto"
+msgstr "Deste produto"
+
+msgid "Brinde Compre"
+msgstr "Compre unidades deste produto"
+
+msgid "Brinde Ganhe"
+msgstr "Ganhe unidades..."
+
+msgid "Brinde"
+msgstr "Deste produto"
+
+msgid "Regioes"
+msgstr "Regiões"
+
+msgid "Add Regiao"
+msgstr "Adicionar região"
+
+msgid "List Regioes"
+msgstr "Listar regiões"
+
+msgid "Edit Regiao"
+msgstr "Editar região"
+
+msgid "New Regiao"
+msgstr "Nova região"
+
+msgid "View Regiao"
+msgstr "Ver região"
+
+msgid "Regioes Representantes"
+msgstr ""
+
+msgid "Add Regioes Representante"
+msgstr ""
+
+msgid "List Regioes Representantes"
+msgstr ""
+
+msgid "Edit Regioes Representante"
+msgstr ""
+
+msgid "New Regioes Representante"
+msgstr ""
+
+msgid "View Regioes Representante"
+msgstr "Ver região do representante"
+
+msgid "Responsavel Sessoes"
+msgstr ""
+
+msgid "Add Responsavel Sessao"
+msgstr ""
+
+msgid "List Responsavel Sessoes"
+msgstr ""
+
+msgid "Edit Responsavel Sessao"
+msgstr ""
+
+msgid "New Responsavel Sessao"
+msgstr ""
+
+msgid "View Responsavel Sessao"
+msgstr "Ver responsável da sessão"
+
+msgid "Sessoes"
+msgstr "Sessões"
+
+msgid "Add Sessao"
+msgstr "Adicionar sessão"
+
+msgid "List Sessoes"
+msgstr "Listar sessões"
+
+msgid "Edit Sessao"
+msgstr "Editar sessão"
+
+msgid "New Sessao"
+msgstr "Nova sessão"
+
+msgid "View Sessao"
+msgstr "Ver sessão"
+
+msgid "Tabela Precos"
+msgstr "Tabela de preço"
+
+msgid "Add Tabela Preco"
+msgstr "Adicionar tabela de preço"
+
+msgid "List Tabela Precos"
+msgstr "Listar tabelas de preços"
+
+msgid "Edit Tabela Preco"
+msgstr "Editar tabela de preço"
+
+msgid "New Tabela Preco"
+msgstr "Nova tabela de preço"
+
+msgid "View Tabela Preco"
+msgstr "Ver tabela de preço"
+
+msgid "Percentual Maximo Desconto"
+msgstr "% de desconto"
+
+msgid "Preco Promocional"
+msgstr "Preço promocional"
+
+msgid "Data Inicio Preco Promocional"
+msgstr "Data início promoção"
+
+msgid "Date Fim Preco Promocional"
+msgstr "Data fim da promoção"
+
+msgid "Tipo Contatos"
+msgstr "Tipo de contato"
+
+msgid "Add Tipo Contato"
+msgstr "Adicionar tipo de contato"
+
+msgid "List Tipo Contatos"
+msgstr "Listar  tipos de contatos"
+
+msgid "Edit Tipo Contato"
+msgstr "Editar tipo de contato"
+
+msgid "New Tipo Contato"
+msgstr "Novo tipo de contato"
+
+msgid "View Tipo Contato"
+msgstr "Ver tipo de contato"
+
+msgid "Ativo"
+msgstr ""
+
+msgid "Usuario Grupos"
+msgstr "Grupo de usuário"
+
+msgid "Add Usuario Grupo"
+msgstr "Adicionar grupo de usuário"
+
+msgid "Add Usuario Grupos"
+msgstr "Adicionar grupo de usuário"
+
+msgid "List Usuario Grupos"
+msgstr "Listar grupos de usuários"
+
+msgid "Edit Usuario Grupo"
+msgstr "Editar grupo de usuário"
+
+msgid "New Usuario Grupo"
+msgstr "Novo grupo de usuário"
+
+msgid "List Usuario Grupo"
+msgstr "Listar grupo de usuários"
+
+msgid "New Usuario Grupos"
+msgstr "Novo grupo de usuário"
+
+msgid "View Usuario Grupo"
+msgstr "Ver grupo de usuário"
+
+msgid "nome"
+msgstr ""
+
+msgid "Changed By"
+msgstr "Modificado por"
+
+msgid "Usuarios"
+msgstr "Usuários"
+
+msgid "Add Usuario"
+msgstr "Adicionar usuário"
+
+msgid "List Usuarios"
+msgstr "Listar usuários"
+
+msgid "Nova senha:"
+msgstr ""
+
+msgid "Edit Usuario"
+msgstr "Editar usuário"
+
+msgid "New Usuario"
+msgstr "Novo usuário"
+
+msgid "Alterar senha"
+msgstr ""
+
+msgid "Salvar senha"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Editar"
+msgstr ""
+
+msgid "Trocar senha"
+msgstr ""
+
+msgid "eCPF's"
+msgstr ""
+
+msgid "Procurações"
+msgstr ""
+
+msgid "Envie o certificado .pfx"
+msgstr ""
+
+msgid "Escreva a senha"
+msgstr ""
+
+msgid "Enviar"
+msgstr ""
+
+msgid "Sim"
+msgstr ""
+
+msgid "Não"
+msgstr ""
+
+msgid "Ativar?"
+msgstr ""
+
+msgid "Recuperar senha"
+msgstr ""
+
+msgid "Escreva seu e-mail abaixo e siga as instruções enviadas ao mesmo:"
+msgstr ""
+
+msgid "View Usuario"
+msgstr "Ver usuário"
+
+msgid "Celular"
+msgstr ""
+
+msgid "Add Valor Caracteristica"
+msgstr "Adicionar valor da característica"
+
+msgid "Edit Valor Caracteristica"
+msgstr "Editar valor da característica"
+
+msgid "Valor Caracteristicas"
+msgstr "valor da característica"
+
+msgid "New Valor Caracteristica"
+msgstr ""
+
+msgid "View Valor Caracteristica"
+msgstr "Ver valor da característica"
+
+msgid "List Valor Caracteristicas"
+msgstr "Lista de Valores das característica"
+
+msgid "Bl Awb"
+msgstr "BL AWD"
+
+msgid "Cnpj Cliente"
+msgstr "CNPJ Cliente"
+
+msgid "Data Emissao"
+msgstr "Data Emissão"
+
+msgid "Cnpj Representante"
+msgstr "CNPJ Representante"
+
+msgid "View Container"
+msgstr "Container"
+
+msgid "Valor Cif"
+msgstr "Valor CIF"
+
+msgid "Observacoes"
+msgstr "Observações"
+
+msgid "Cnpj Despachante"
+msgstr "CNPJ Despachante"
+
+msgid "ncm"
+msgstr "NCM"
+
+msgid "Ce Mercante"
+msgstr "CE Mercante"
+
+#: View/Widget/DateTimeWidget.php:530
+msgid "January"
+msgstr "Janeiro"
+
+#: View/Widget/DateTimeWidget.php:531
+msgid "February"
+msgstr "Fevereiro"
+
+#: View/Widget/DateTimeWidget.php:532
+msgid "March"
+msgstr "Março"
+
+#: View/Widget/DateTimeWidget.php:533
+msgid "April"
+msgstr "Abril"
+
+#: View/Widget/DateTimeWidget.php:534
+msgid "May"
+msgstr "Maio"
+
+#: View/Widget/DateTimeWidget.php:535
+msgid "June"
+msgstr "Junho"
+
+#: View/Widget/DateTimeWidget.php:536
+msgid "July"
+msgstr "Julho"
+
+#: View/Widget/DateTimeWidget.php:537
+msgid "August"
+msgstr "Agosto"
+
+#: View/Widget/DateTimeWidget.php:538
+msgid "September"
+msgstr "Setembro"
+
+#: View/Widget/DateTimeWidget.php:539
+msgid "October"
+msgstr "Outubro"
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "November"
+msgstr "Novembro"
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "December"
+msgstr "Dezembro"
+
+msgid "Change company"
+msgstr "Selecionar empresa"
+
+
+msgid "Add Item"
+msgstr "Adicionar item/produto"
+
+msgid "Entradas"
+msgstr "Documentos de entrada"
+
+msgid "Entrada"
+msgstr "Documento de entrada"
+
+msgid "New Entrada"
+msgstr "Novo documento de entrada"
+
+msgid "Edit Entrada"
+msgstr "Editar documento de entrada"
+
+msgid "Add Entrada"
+msgstr "Novo documento de entrada"
+
+msgid "List Entradas"
+msgstr "Lista documentos de entrada"
+
+msgid "Cpf"
+msgstr "CPF"
+
+msgid "New Instituicoes Financeira"
+msgstr "Nova Instituição Financeira"
+
+msgid "This value is already in use"
+msgstr "Valor já cadastrado"
+
+msgid "List "
+msgstr "Listar "
+
+msgid "Add "
+msgstr "Adicionar "
+
+msgid "New "
+msgstr "Cadastrar "
+
+msgid "Index "
+msgstr " "
+
+msgid "Editing "
+msgstr "Editando "
+
+msgid "of"
+msgstr "de"
+
+msgid " of "
+msgstr " de "
+
+msgid "id"
+msgstr "ID"
+
+msgid "Id"
+msgstr "ID"
+
+msgid "Edit "
+msgstr "Editar "
+
+msgid " has been saved."
+msgstr " foi cadastrada(o) com sucesso!"
+
+msgid " could not be saved. Please, try again."
+msgstr " não foi cadastrada(o) com sucesso, tente novamente."
+
+msgid "Composicao1"
+msgstr "Composição 1"
+
+msgid "Composicao2"
+msgstr "Composição 2"
+
+msgid "Composicao3"
+msgstr "Composição 3"
+
+msgid "Composicao4"
+msgstr "Composição 4"
+
+msgid "TipoEstruturas"
+msgstr "Tipo Estruturas"
+
+msgid "Pages"
+msgstr "Página Inicial"
+
+msgid "EmpresasUsuarios"
+msgstr "Vínculo Empresas à Usuários"
+
+msgid "Usuarios"
+msgstr "Usuários"
+
+msgid "Usuario"
+msgstr "Usuário"
+
+msgid "Yes"
+msgstr "Sim"
+
+msgid "No"
+msgstr "Não"
+
+msgid "Endereco"
+msgstr "Endereço"
+
+msgid "EstoqueEnderecos"
+msgstr "Estoques Endereços"
+
+msgid "Estoque Enderecos"
+msgstr "Estoque Endereços"
+
+msgid "Operacoes"
+msgstr "Operações"
+
+msgid "Moedas Cotacoes"
+msgstr "Moedas Cotações"
+
+msgid "MoedasCotacoes"
+msgstr "Moedas Cotações"
+
+msgid "Moedas Cotacao"
+msgstr "Moedas Cotação"
+
+msgid "Tipo Cotacao"
+msgstr "Tipo Cotação"
+
+msgid "Valor Cotacao"
+msgstr "Valor Cotação"
+
+msgid "Data Cotacao"
+msgstr "Data Cotação"
+
+msgid "DocumentacaoEntrada"
+msgstr "Documentação de Entrada"
+
+msgid "The provided value is invalid"
+msgstr "O valor informado não é válido!"
+
+msgid "Veiculo Identificacao"
+msgstr "Veículo Identificação"
+
+msgid "Operacao"
+msgstr "Operação"
+
+msgid "Rg"
+msgstr "RG"
+
+msgid "Cnh"
+msgstr "CNH"
+
+msgid "Cnh Validade"
+msgstr "CNH Validade"
+
+msgid "OrdemServicoTipos"
+msgstr "Tipos Ordem de Serviço"
+
+msgid "OrdensServicoPendentes"
+msgstr "Ordens de Serviço Pendentes"
+
+msgid "Ordem Servico Tipo"
+msgstr "Tipo de Ordens Serviço"
+
+msgid "This value does not exist"
+msgstr "Este valor não foi passado via parâmetro"
+
+msgid "_existsIn"
+msgstr "necessário"
+
+msgid "_empty"
+msgstr "_vazio"
+
+msgid "This field is required"
+msgstr "Este campo é obrigatório"
+
+msgid "This field cannot be left empty"
+msgstr "Este campo não pode ficar vazio"
+
+msgid "Ordem Servico Servexecs"
+msgstr "Ordens de Serviços Executadas"
+
+msgid "The"
+msgstr "O registro de "
+
+msgid "has been deleted."
+msgstr "foi deletado com sucesso!"
+
+msgid "could not be deleted. Please, try again."
+msgstr "não pode ser deletado. Por favor tente novamente!"
+
+msgid "moedas cotacao"
+msgstr "Cotação de Moedas"
+
+msgid " of "
+msgstr " de "
+
+msgid "of"
+msgstr "de"
+
+msgid "Return Files from Bank"
+msgstr "Retonar Arquivos do Banco"
+
+msgid "Process"
+msgstr "Processar"
+
+msgid "Menuses"
+msgstr "Menus"
+
+msgid "Documentacao Entrada"
+msgstr "Documentação Entrada"
+
+msgid "Documentacao Entradas"
+msgstr "Documentações Entradas"
+
+msgid "Faturamento Fechamento"
+msgstr "Fechamento de Faturamento"
+
+msgid "Situacao"
+msgstr "Situação"
+
+msgid "situacao"
+msgstr "situação"
+
+msgid "Numero"
+msgstr "Número"
+
+msgid "numero"
+msgstr "número"
+
+msgid "Versao"
+msgstr "Versão"
+
+msgid "versao"
+msgstr "versão"
+
+msgid "Viagem Numero"
+msgstr "Viagem"
+
+msgid "viagem numero"
+msgstr "viagem"
+
+msgid "Codigo Unico"
+msgstr "Código Único"
+
+msgid "Json Header"
+msgstr "JSON Header"
+
+msgid "Integracao"
+msgstr "Integração"
+
+msgid "Conversao Sku"
+msgstr "Conversão de SKU"
+
+msgid "Conversao Skus"
+msgstr "Conversão de SKUs"
+
+msgid "Uf"
+msgstr "UF"
+
+msgid "Cep"
+msgstr "CEP"
+
+msgid "Ra Codigo"
+msgstr "RA Código"
+
+msgid "Titulo"
+msgstr "Título"
+
+msgid "Nivel"
+msgstr "Nível"
+
+msgid "Nome Unico"
+msgstr "Nome Único"
+
+msgid "Dias Vencimento"
+msgstr "Dias para o Vencimento"
+
+msgid "Razao Social"
+msgstr "Razão Social"
+
+msgid "Data Hora Saida"
+msgstr "Data Hora Saída"
+
+msgid "Veiculo"
+msgstr "Veículo"
+
+msgid "Resv Codigo"
+msgstr "Resv Código"
+
+msgid "Tipos Ordem de Serviço"
+msgstr "Tipos de Ordem de Serviço"
+
+msgid "Servicos"
+msgstr "Serviços"
+
+msgid "Ordem De Serviço"
+msgstr "Ordem de Serviço"
+
+msgid "Serie"
+msgstr "Série"
+
+msgid "Endereco Origem"
+msgstr "Endereço Origem"
+
+msgid "Endereco Destino"
+msgstr "Endereço Destino"
+
+msgid "Lote Codigo"
+msgstr "Lote Código"
+
+msgid "Codigo Barras"
+msgstr "Código de Barras"
+
+msgid "House Desconsolidacao"
+msgstr "House Desconsolidação"
+
+msgid "Data Desembaraco"
+msgstr "Data Desembaraço"
+
+msgid "Data Apreensao"
+msgstr "Data Apreensão"
+
+msgid "Data Liberacao"
+msgstr "Data Liberação"
+
+msgid "Tipo Pagamentos"
+msgstr "Tipo de Pagamentos"
+
+msgid "Forma Pagamentos"
+msgstr "Forma de Pagamentos"
+
+msgid "Formula"
+msgstr "Fórmula"
+
+msgid "Data Inicio Vigencia"
+msgstr "Data Início Vigencia"
+
+msgid "Motivo Feriado"
+msgstr "Motivo do Feriado"
+
+msgid "Faturamento Fechamentos"
+msgstr "Fechamentos de Faturamento"
+
+msgid "Periodo Inicial"
+msgstr "Periodo Inícial"
+
+msgid "Inventario"
+msgstr "Inventário"
+
+msgid "Inventario do Armazem"
+msgstr "Inventário do Armazem"
+
+msgid "Maritimos"
+msgstr "Marítimos"
+
+msgid "Planejamento Maritimos"
+msgstr "Planejamento Marítimos"
+
+msgid "Planejamento Maritimo"
+msgstr "Planejamento Marítimo"
+
+msgid "Ncm"
+msgstr "NCM"
+
+msgid "asasss"
+msgstr "asasss"
+
+msgid "Paralizacao Motivo"
+msgstr "Paralização Motivo"
+
+msgid "paralizacao_motivo_id"
+msgstr "Paralização Motivo"
+
+msgid "Mostra Codigo"
+msgstr "Mostra Código"
+
+msgid "Mostra Qtd"
+msgstr "Mostra Quantidade"
+
+msgid "Retencoes"
+msgstr "Retenções"
+
+msgid "Retencao"
+msgstr "Retenção"
+
+msgid "Empresas Retencao"
+msgstr "Empresas Retenções"

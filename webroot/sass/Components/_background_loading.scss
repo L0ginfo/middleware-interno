@@ -1,0 +1,48 @@
+/**
+    O elemento pai da classe .lf-content-background-loading 
+    deverá ser position: relative para funcionar a sobreposição
+    que esse componente trabalha
+*/
+
+.lf-content-background-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    .block {
+        background-color: #eeeeee;
+    }
+
+    &.show-blank {
+        .animated-background {
+            animation: none;
+            background: transparent;
+        }
+    }
+
+    .animated-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: innerShadowBackgroundLoading;
+        animation-timing-function: linear;
+        background: #f6f7f8;
+        background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+        background-size: 800px 104px;
+        height: 96px;
+        position: relative;
+    }
+}
+
+@keyframes innerShadowBackgroundLoading {
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}

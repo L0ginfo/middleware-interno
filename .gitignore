@@ -1,0 +1,113 @@
+# CakePHP 3 #
+##########################
+!/tmp/cache/models/empty
+!/tmp/cache/persistent/empty
+!/tmp/cache/views/empty
+!/tmp/sessions/empty
+!/tmp/tests/empty
+!/logs/empty
+
+
+# Cake PHP 2 #
+##########################
+/app/tmp/*
+/app/Config/core.php
+/app/Config/database.php
+/nbproject/private/
+/config/bootstrap.php
+/config/app.php
+/config/.env
+
+webroot/deployAws/
+webroot/files/
+webroot/uploads/
+webroot/dist/bundle.js
+webroot/dist/bundle.min.js
+webroot/dist/bundle-js.js
+webroot/dist/bundle-js.min.js
+webroot/dist/bundle-css.js
+webroot/dist/bundle-css.min.js
+webroot/dist/bundle-all.min.js
+
+# Other files #
+##########################
+/logs/*
+/tmp/*
+/vendor/*
+/deployAws
+composer.lock
+
+# Npm e Yarn #
+##########################
+webroot/node_modules
+package-lock.json
+yarn.lock
+# Debug
+npm-debug.log*
+yarn-debug.log*
+# Error
+yarn-error.log*
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.directory
+
+
+# Tool specific files #
+#######################
+# vim
+*~
+*.swp
+*.swo
+# sublime text & textmate
+*.sublime-*
+*.stTheme.cache
+*.tmlanguage.cache
+*.tmPreferences.cache
+# Eclipse
+.settings/*
+# JetBrains, aka PHPStorm, IntelliJ IDEA
+.idea/*
+# NetBeans
+nbproject/*
+# Visual Studio Code
+.vscode
+# Sass preprocessor
+.sass-cache/
+
+
+# Files #
+#######################
+/files/*
+!/files/processados
+!/files/processar
+!/files/dropzone/xml-nf
+!/files/dropzone/vistorias
+
+/files/dropzone/*
+!/files/dropzone/xml-nf/*
+!/files/dropzone/vistorias/*
+
+/files/processados/*
+!/files/processados/empty
+
+/files/processar/*
+!/files/processar/empty
+
+/files/dropzone/vistorias/*
+!/files/dropzone/vistorias/empty
+
+/files/dropzone/xml-nf/*
+!/files/dropzone/xml-nf/empty
+
+# Ubuntu
+root

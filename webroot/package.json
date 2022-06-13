@@ -1,0 +1,44 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run development",
+    "development": "webpack --progress --hide-modules --config=webpack.config.js",
+    "watch": "webpack --watch --progress --hide-modules --config=webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=webpack.config.js"
+  },
+  "dependencies": {
+    "ajax-bootstrap-select": "^1.4.5",
+    "bootstrap-filestyle": "^1.2.1",
+    "ckeditor4": "^4.16.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "dropzone": "^5.5.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "file-loader": "^0.11.2",
+    "icheck-material": "^1.0.1",
+    "jquery-hoverintent": "^1.10.1",
+    "jquery-maskmoney": "^3.0.2",
+    "jquery.numeric": "^1.0.0",
+    "metismenu": "^3.0.4",
+    "moment": "^2.26.0",
+    "node-sass": "^4.5.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.18.2",
+    "sweetalert2": "^8.17.6",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "uglify-js": "^3.0.25",
+    "unminified-webpack-plugin": "^1.2.0"
+  }
+}

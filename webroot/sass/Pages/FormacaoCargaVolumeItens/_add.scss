@@ -1,0 +1,25 @@
+.formacao-carga-volume-itens.add {
+
+    .separacao_cargas {
+
+        .separacao_carga {
+            padding: 5px 8px;
+            background-color: #ccc;
+            border-radius: 3px;
+            margin: 5px 0;
+            cursor: pointer;
+            display: inline-block;
+            transition: .3s;
+
+            &:hover,
+            &:focus {
+                opacity: .6;
+            }
+
+            &.active {
+                background-color: #090909;
+                color: #fff;
+            }
+        }
+    }
+}

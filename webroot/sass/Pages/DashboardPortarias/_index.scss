@@ -1,0 +1,44 @@
+.dashboardPortarias {
+    .pesquisa {
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        padding-top: 12px;
+        padding-bottom: 20px;
+    }
+    .informacoes {
+        border: 1px solid #e4e1e1;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 0 -8px;
+        .temporizador {
+            text-align: center;
+            background: #dedede;
+            padding: 18px;
+            border: 1px solid #c7c7c7;
+            border-radius: 4px;
+            h3, h4 {
+                margin: 0;
+            }
+        }
+        .linha2 {
+            .programacao {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 45px;
+            }
+        }
+    
+    }
+    .fotos {
+        .foto {
+            margin: 26px 11px;
+            text-align: center;
+            border: 1px solid #dedede;
+            border-radius: 3px;
+            img {
+                width: 500px;
+            }
+        }
+    }
+} 

@@ -1,0 +1,362 @@
+<style> 
+	/*CSS do PDF 012(pesagem)*/
+	body {
+	    font-family:arial;
+	    font-size:10pt;
+	}
+	table td {
+	    width:7px;
+	}
+	table {
+	    border-collapse:collapse;
+	    border-spacing: 0px;
+	    font-size:9pt;
+	    width:700px
+	}
+	.td-border td{
+	    border:1px solid black;
+
+	}
+	.tr-title td{
+	    background-color:silver;
+
+	}
+	.my-table td {
+	    padding:3px;
+	    padding-bottom:6px;
+	    padding-top:1px;
+	    font-size:10pt;
+	}
+	h3 {
+		margin-top: 1px;
+		margin-bottom: 5px;
+		font-weight: bold;
+		/*text-align: center;*/
+	}
+	h4 {
+		margin-top: 1px;
+		margin-bottom: 4px;
+		font-weight: bold;
+	}
+	hr { 
+	    display: block;
+	    margin-top: 0.4em;
+	    margin-bottom: 0.4em;
+	    margin-left: auto;
+	    margin-right: auto;
+	    border-style: inset;
+	    border-width: 2px;
+	}
+	img {
+	    width: 103px;
+	    height:87px;
+	    margin-top: 5px;
+	}
+</style>
+
+<?php
+	// Funcao para formatar CNPJ, CPF, CEP, DATA
+	function mask($val, $mask)
+	{
+		$maskared = '';
+		$k = 0;
+		for ($i = 0; $i<=strlen($mask)-1; $i++) {
+			if ($mask[$i] == '#') {
+				if(isset($val[$k]))
+					$maskared .= $val[$k++];
+			} else {
+				if (isset($mask[$i]))
+					$maskared .= $mask[$i];
+			}
+		}
+		return $maskared;
+	}
+	/* EXEMPLO DE USO 
+	$cnpj = "11222333000199";
+	$cpf = "00100200300";
+	$cep = "08665110";
+	$data = "10102010";
+
+	echo mask($cnpj,'##.###.###/####-##');
+	echo mask($cpf,'###.###.###-##');
+	echo mask($cep,'#####-###');
+	echo mask($data,'##/##/####');*/
+?>
+<!-- Cabeçalho -->
+<div style="width:100%; height:5px;">
+	<table style="table-layout: fixed;width:100%;">
+		<tr>
+			<td>
+				<center>
+					<img src="resources/logo002.png">
+				</center>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size:15pt;">
+				<b>
+					<center>INFORMAÇÕES DE PESAGEM</center>
+				</b>
+			</td>
+		</tr>
+	</table>
+</div>
+<div style="background-color:#F60;; width:100%; height:5px;"></div>
+<br>
+<!-- Informações da Barra do Rio -->
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="30"><span style="font-weight:bold;"><?= $this->sis_nome_filial ? $this->sis_nome_filial : "---"; ?></span></td>
+		<?php
+		  	// retorna data atual
+			date_default_timezone_set('America/Sao_Paulo');
+			$data_atual = date('d/m/Y H:i:s');
+		?>
+		<td colspan="70" align="right"><span style="font-weight:bold;">Data de Impressão: </span><?= $data_atual ? $data_atual : "---"; ?></td>
+	</tr>
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">Endereço: </span><?= $this->sis_endereco ? $this->sis_endereco : "---"; ?></td>
+	</tr>
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">Bairro: </span><?= $this->sis_bairro ? $this->sis_bairro : "---"; ?></td>
+	</tr>
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">Cidade: </span><?= $this->sis_cidade ? $this->sis_cidade : "---"; ?></td>
+	</tr>
+	<tr>
+		<?php
+			// formata o cep 
+			$cep = $this->sis_cep;
+			$cep = mask($cep, '#####-###');
+		?>
+		<td colspan="50"><span style="font-weight:bold;">CEP: </span><?= $cep ? $cep : "---"; ?></td>
+	</tr>
+</table>
+<hr>
+<h3>INFORMAÇÕES</h3>
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">TICKET DE PESAGEM: </span><?= $this->bal_numero ? $this->bal_numero : "---"; ?></td>
+		<?php
+			// formata a data do cesv_dt_entrada
+			$cesv_dt_entrada = $this->cesv_dt_entrada;
+			if ($cesv_dt_entrada) {
+				$dataHora = implode("/", explode("-", $cesv_dt_entrada ));
+				$dataHora = explode(" ", $dataHora);
+				$formato = array_reverse(explode("/", $dataHora[0]));
+				$hora = explode(".", $dataHora[1]);	
+				$cesv_dt_entrada = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];		
+			}
+		?>
+		<td colspan="50" align="right"><span style="font-weight:bold;">DATA ENTRADA: </span><?= $cesv_dt_entrada ? $cesv_dt_entrada : "---"; ?></td>
+		
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">CESV: </span><?= $this->cesv_id ? $this->cesv_id : "---"; ?></td>
+		<td colspan="35"><span style="font-weight:bold;">PLACA DIANTERIA: </span><?= $this->vei_id ? $this->vei_id : "---"; ?></td>
+		<td colspan="30" style="text-align: right;"><span style="font-weight:bold;">REBOQUES: </span>
+			<?php
+				// varre o array de reboques 
+				foreach ($this->reboques as $reboque) {
+					echo $reboque . "- ";
+				}
+			?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">OPERAÇÃO: </span><?= $this->op_descricao ? $this->op_descricao : "---"; ?></td>
+		<?php
+			// formata a data do cesv_dt_saida
+			$cesv_dt_saida = $this->cesv_dt_saida;
+			if ($cesv_dt_saida) {
+				$dataHora = implode("/", explode("-", $cesv_dt_saida ));
+				$dataHora = explode(" ", $dataHora);
+				$formato = array_reverse(explode("/", $dataHora[0]));
+				$hora = explode(".", $dataHora[1]);	
+				$cesv_dt_saida = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];		
+			}
+		?>
+		<td colspan="35"><span style="font-weight:bold;">DATA/HORA: </span><?= $cesv_dt_saida ? $cesv_dt_saida : "---"; ?></td>
+		<td colspan="30" align="right"><span style="font-weight:bold;">DATA SAIDA: </span><?= $cesv_dt_saida ? $cesv_dt_saida : "---"; ?></td>
+	</tr>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;">OPERADOR: </span><?= $this->operador ? $this->operador  : "---"; ?></td></td>
+	</tr>
+</table>
+<hr>
+<h3>OBERVAÇÃO CESV</h3>
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td><span style="font-weight:bold;"></span><?= $this->cesv_observacao ? $this->cesv_observacao : "---"; ?></td>
+	</tr>
+</table>
+<br>
+<hr>
+<h3>PESAGEM</h3>
+<h4>ENTRADA</h4>
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">DATA/HORA</span></td>
+		<td colspan="35"><span style="font-weight:bold;">TIPO</span></td>
+		<td colspan="35"><span style="font-weight:bold;">PESO</span></td>
+		<td colspan="35"><span style="font-weight:bold;">PLACA</span></td>	
+		<td colspan="35"><span style="font-weight:bold;">CONTAINER</span></td>
+	</tr>
+	<tr>
+		<td colspan="35">
+			<?php 
+				foreach ($this->bal_dt_entrada as $bal_dt_entrada) {
+					if ($bal_dt_entrada) {
+						// formata data
+						$dataHora = implode("/", explode("-", $bal_dt_entrada ));
+						$dataHora = explode(" ", $dataHora);
+						$formato = array_reverse(explode("/", $dataHora[0]));
+						$hora = explode(".", $dataHora[1]);	
+						$bal_dt_entrada = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];		
+					}
+					echo $bal_dt_entrada ? $bal_dt_entrada . "<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de bal_tipo_entrada
+				foreach ($this->bal_tipo_entrada as $bal_tipo_entrada) {
+					echo $bal_tipo_entrada ? $bal_tipo_entrada . "<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de bal_peso_entrada
+				foreach ($this->bal_peso_entrada as $bal_peso_entrada) {
+					echo $bal_peso_entrada ? $bal_peso_entrada . " Kg<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de vei_id_entrada
+				foreach ($this->vei_id_entrada as $vei_id_entrada) {
+					echo $vei_id_entrada ? $vei_id_entrada . "<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de cnt_id_entrada
+				foreach ($this->cnt_id_entrada as $cnt_id_entrada) {
+					echo $cnt_id_entrada ? $cnt_id_entrada . "<br>" : "---<br>";
+				}
+			?>
+		</td>	
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">PESO ENTRADA: </span><?= $this->soma_peso_entrada ? $this->soma_peso_entrada . " Kg" : "---" ?></td>
+	</tr>
+</table>
+<br>
+<h4>SAIDA</h4>
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">DATA/HORA</span></td>
+		<td colspan="35"><span style="font-weight:bold;">TIPO</span></td>
+		<td colspan="35"><span style="font-weight:bold;">PESO</span></td>
+		<td colspan="35"><span style="font-weight:bold;">PLACA</span></td>	
+		<td colspan="35"><span style="font-weight:bold;">CONTAINER</span></td>
+	</tr>
+	<tr>
+		<td colspan="35">
+			<?php 
+				foreach ($this->bal_dt_saida as $bal_dt_saida) {
+					if ($bal_dt_saida) {
+						// formata a data
+						$dataHora = implode("/", explode("-", $bal_dt_saida ));
+						$dataHora = explode(" ", $dataHora);
+						$formato = array_reverse(explode("/", $dataHora[0]));
+						$hora = explode(".", $dataHora[1]);	
+						$bal_dt_saida = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];		
+					}
+					echo $bal_dt_saida ? $bal_dt_saida . "<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de bal_tipo_saida
+				foreach ($this->bal_tipo_saida as $bal_tipo_saida) {
+					echo $bal_tipo_saida ? $bal_tipo_saida . "<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de bal_peso_saida
+				foreach ($this->bal_peso_saida as $bal_peso_saida) {
+					echo $bal_peso_saida ? $bal_peso_saida . " Kg<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de vei_id_saida
+				foreach ($this->vei_id_saida as $vei_id_saida) {
+					echo $vei_id_saida ? $vei_id_saida . "<br>" : "---<br>";
+				}
+			?>
+		</td>
+		<td colspan="35">
+			<?php 
+				// varre o array de cnt_id_saida
+				foreach ($this->cnt_id_saida as $cnt_id_saida) {
+					echo $cnt_id_saida ? $cnt_id_saida . "<br>" : "---<br>";
+				}
+			?>
+		</td>	
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">PESO SAIDA: </span><?= $this->soma_peso_saida ? $this->soma_peso_saida . " Kg" : "---" ?></td>
+	</tr>
+</table>
+<br>
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<?php
+			// veridica qual o tipo de operacao para fazer a conta de diferenca de peso 
+			$operacao_descricao = $this->op_descricao;
+			if ($operacao_descricao == "DESCARGA") {
+				$diferenca = $this->soma_peso_entrada - $this->soma_peso_saida;
+				$diferenca = number_format($diferenca, 2, '.', '');
+			} else if ($operacao_descricao == "CARGA") {
+				$diferenca = $this->soma_peso_saida - $this->soma_peso_entrada;
+				$diferenca = number_format($diferenca, 2, '.', '');
+			}
+		?>	
+		<td colspan="35"><span style="font-weight:bold;">DIFERENÇA: </span><?= $diferenca . " Kg"?></td>
+	</tr>
+	<tr>
+		<?php
+			// verifiva qual dos totais de pesos (ENTRADA e SAIDA) sao menores para atribuir o tara_veiculo
+			if ($this->soma_peso_entrada > $this->soma_peso_saida) {
+				$tara_veiculo = $this->soma_peso_saida;
+			} else {
+				$tara_veiculo = $this->soma_peso_entrada;
+			}
+		?>
+		<td colspan="35"><span style="font-weight:bold;">TARA VEICULO: </span><?= $tara_veiculo . " Kg" ?></td>
+	</tr>
+	<tr>
+		<?= $tara_container = number_format($this->tara_container, 2, '.', ''); ?>
+		<td colspan="35"><span style="font-weight:bold;">TARA CONTAINER: </span> <?= $tara_container . " Kg" ?> </td>
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">QTD CONTAINERS: </span><?= $this->qtd_containers ?></td>
+	</tr>
+</table>
+<hr>
+<h3>OBSERVAÇÕES</h3>
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="100"><?= $this->observacoes ? $this->observacoes : "---" ?></td>
+	</tr>
+</table>

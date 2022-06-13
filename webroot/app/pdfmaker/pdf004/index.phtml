@@ -1,0 +1,202 @@
+<style>
+
+body {
+    font-family:arial;
+    font-size:8pt;
+}
+
+table td {
+    width:7px;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing: 0px;
+    font-size:8pt;
+    width:700px
+}
+
+.td-border td{
+    border:1px solid black;
+
+}
+
+.tr-title td{
+    background-color:silver;
+
+}
+
+.my-table td {
+    padding:3px;
+    padding-bottom:6px;
+    padding-top:6px;
+    font-size:10pt;
+}
+
+
+</style>
+
+<?php for($i = 1; $i <= 2; $i++): ?>
+
+<?php if ($i == 2): ?>
+<br />
+<br />
+<hr />
+<?php endif; ?>
+
+<table style="table-layout: fixed;width:100%;">
+<tr>
+<td style="width:20%" ><img src="resources/logo.png" style="width:103px; height:87px"></td>
+<td style="text-align:center; width:60%; font-size:15pt;"><?=  str_replace(['GERAR'], '' ,  strtoupper ($this->LABEL_PROTOCOLO)) ?> 
+<br><br >
+</br><barcode style="border-width:0;" code="1004<?= $this->PORTAL_AGENDAMENTO_ID ?>" size="1.2" type="C128B" />
+<br><span style="text-align:center; width:60%; font-size:10pt;"> 1004<?= $this->PORTAL_AGENDAMENTO_ID ?></span>
+</td>
+<td style="text-align:right; width:20%" ><barcode style="border-width:0;" code="<?= $this->params['url'] ?>" type="QR" error="M"></td>
+</tr>
+
+</table>
+
+</table>
+<br />
+<div style="background-color:#F60; width:100%; height:10px"></div>
+
+
+<table class="my-table" style="table-layout: fixed; width:1100px;">
+
+<tr>
+<td colspan="100"></td>
+</tr>
+
+<tr>
+<td colspan="50" style="width:550px ; font-size:12pt;">CARGA</td>
+<td colspan="20" style="width:220px; text-align:right">Localizador<br /> 1004<?= $this->PORTAL_AGENDAMENTO_ID ?></td>
+<td colspan="30" style="width:330px"><barcode style="border-width:0;" code="1004<?= $this->PORTAL_AGENDAMENTO_ID ?>" type="C128B" /></td>
+</tr>
+
+<tr class="tr-title">
+<td colspan="20">Data Agendamento</td>
+<td colspan="40">Cliente</td>
+<td colspan="40">Transportadora</td>
+</tr>
+
+<tr>
+<?php $date = date_create($this->DATA_AGENDAMENTO) ?>
+<td colspan="20"><?= date_format($date, 'd/m/Y')  ?> - <?= $this->HORA_AGENDAMENTO  ?></td>
+<td colspan="40">
+<?php 
+
+
+foreach ($this->clientes as $rowCliente)
+{
+echo  $rowCliente . '<br />';
+}
+
+?>
+
+
+</td>
+<td colspan="40"><?= $this->TRANSPORTADORA ?></td>
+</tr>
+
+<tr class="tr-title">
+<td colspan="40">Placa(s)</td>
+<td colspan="60">Motorista / CPF</td>
+
+</tr>
+
+<tr>
+<td colspan="40"><?= $this->PLACA_CAMINHAO . ';' . $this->PACA_REBOQUES ?></td>
+<td colspan="60"><?= $this->MOTORISTA ?></td>
+</tr>
+
+
+<tr class="tr-title">
+
+<td colspan="10">Tipo</td>
+<td colspan="15">N.Doc.Saida</td>
+<td colspan="5">Item</td>
+<td colspan="15">N.Doc.Entrada</td>
+<td colspan="10">Contêiner</td>
+
+<td colspan="10">Embalagem</td>
+
+<td colspan="30">Descrição do Item</td>
+<td colspan="10">Quant.</td>
+</tr>
+
+<?php foreach($this->itens as $row): ?>
+<?php $row = (object) $row; ?>
+
+<tr>
+<td colspan="10"><?= $row->DOC_ID ?></td>
+<td colspan="15"><?= $row->DOC_SAIDA ?></td>
+<td colspan="5"><?= $row->ITEM ?></td>
+<td colspan="15"><?= $row->DOC_ENTRADA ?></td>
+<td colspan="10"><?= $row->CNT_ID ?></td>
+
+<td colspan="10"><?= $row->ESP_ID ?> </td>
+<td colspan="30"><?= htmlentities( $row->DESC_PRODUTO ) ?></td>
+<td colspan="10"  align="center"><?= $row->QT_CARREGADA	 ?></td>
+</tr>
+<?php endforeach; ?>
+
+
+</table>
+
+
+<table>
+<tr>
+
+
+<td style="width:200px; vertical-align:bottom; border:1px solid black">
+Assinatura COMEX<br />
+CPF:
+</td>
+
+
+
+<td style="width:80px; text-align:center;">
+<img src="resources/atencao.png" width="60px" height="60px" /><br />
+Motorista para acessar o terminal ser faz obrigatório:
+</td>
+
+<td style="width:80px; text-align:center;">
+<img src="resources/carteira.png" width="60px" height="60px" /><br />
+CNH
+</td>
+<td style="width:80px; text-align:center;">
+<img src="resources/colete.png" width="60px" height="60px" /><br />
+Colete refletivo
+</td>
+
+<td style="width:80px; text-align:center;">
+<img src="resources/botas.png" width="60px" height="60px" /><br />
+Sapato de seguranca
+</td>
+<td style="width:80px; text-align:center;">
+<img src="resources/capacete.png" width="60px" height="60px" /><br />
+Capacete
+</td>
+</tr>
+<tr>
+<?php $date = date_create($this->CREATED) ?>
+<td colspan='6'><br> Agendado em: <?=  date_format($date, 'd/m/Y H:i')     ?>          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+$data_atual = date('d/m/Y H:i');
+?>
+Protocolo gerado em: <?= $data_atual ; ?></td>
+</tr>
+<tr>
+
+<td colspan='8'  style=" text-align:center;color:red"><br />
+<b>
+“Atentar ao horário de agendamento na ordem de carregamento,<br /> caso o motorista não comparecer ou atrase sem aviso prévio, estará sujeito a reprogramação.”
+</b>
+</td>
+</tr>
+
+</table>
+
+<?php endfor; ?>

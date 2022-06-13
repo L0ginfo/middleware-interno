@@ -1,0 +1,405 @@
+.lf-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.lf-text-bold { font-weight: bold !important; }
+.lf-text-left { text-align: left !important; }
+.lf-text-center { text-align: center !important; }
+.lf-text-right { text-align: right !important; }
+
+.lf-margin { margin: 20px !important; }
+.lf-margin-top { margin-top: 20px !important; }
+.lf-margin-bottom { margin-bottom: 20px !important; }
+.lf-margin-left { margin-left: 20px !important; }
+.lf-margin-right { margin-right: 20px !important; }
+
+.lf-margin-small { margin: 10px !important; }
+.lf-margin-small-top { margin-top: 10px !important; }
+.lf-margin-small-bottom { margin-bottom: 10px !important; }
+.lf-margin-small-left { margin-left: 10px !important; }
+.lf-margin-small-right { margin-right: 10px !important; }
+
+.lf-margin-medium { margin: 40px !important; }
+.lf-margin-medium-top { margin-top: 40px !important; }
+.lf-margin-medium-bottom { margin-bottom: 40px !important; }
+.lf-margin-medium-left { margin-left: 40px !important; }
+.lf-margin-medium-right { margin-right: 40px !important; }
+
+.lf-margin-large { margin: 60px !important; }
+.lf-margin-large-top { margin-top: 60px !important; }
+.lf-margin-large-bottom { margin-bottom: 60px !important; }
+.lf-margin-large-left { margin-left: 60px !important; }
+.lf-margin-large-right { margin-right: 60px !important; }
+
+.lf-full-width{width: 100% !important;}
+
+.row {
+    overflow: auto;
+    width: 100%;
+}
+
+.col-sm-1 , .col-sm-2 , .col-sm-3 ,
+.col-sm-4 , .col-sm-5 , .col-sm-6,
+.col-sm-7 , .col-sm-8, .col-sm-9 ,
+.col-sm-10 , .col-sm-11 , .col-sm-12 {
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+}
+
+.col-md-1 , .col-md-2 , .col-md-3 ,
+.col-md-4 , .col-md-5 , .col-md-6,
+.col-md-7 , .col-md-8, .col-md-9 ,
+.col-md-10 , .col-md-11 , .col-md-12 {
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+}
+
+.col-lg-1 , .col-lg-2 , .col-lg-3 ,
+.col-lg-4 , .col-lg-5 , .col-lg-6,
+.col-lg-7 , .col-lg-8, .col-lg-9 ,
+.col-lg-10 , .col-lg-11 , .col-lg-12 {
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+}
+
+@media(max-width: 439px){
+    .col-xs-1 {
+        float: left;
+        width: 8.33%;
+        min-height: 1px;
+        position: relative;
+    }
+    .col-xs-2 {
+        float: left;
+        width: 16.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-3 {
+        float: left;
+        width: 25%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-4 {
+        float: left;
+        width: 33.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-5 {
+        float: left;
+        width: 41.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    
+    .col-xs-6 {
+        float: left;
+        width: 50%;
+        position: relative;
+        min-height: 1px;
+    }
+    
+    .col-xs-7 {
+        float: left;
+        width: 58.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-8 {
+        float: left;
+        width: 66.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-9 {
+        float: left;
+        width: 75%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-10 {
+        float: left;
+        width: 83.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    
+    .col-xs-11 {
+        float: left;
+        width: 91.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-xs-12 {
+        float: left;
+        width: 100%;
+        position: relative;
+        min-height: 1px;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 739px) {
+
+    .col-sm-1 {
+        float: left;
+        width: 8.33%;
+        min-height: 1px;
+        position: relative;
+    }
+    .col-sm-2 {
+        float: left;
+        width: 16.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-3 {
+        float: left;
+        width: 25%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-4 {
+        float: left;
+        width: 33.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-5 {
+        float: left;
+        width: 41.66%;
+        position: relative;
+        min-height: 1px;
+    }
+
+    .col-sm-6 {
+        float: left;
+        width: 50%;
+        position: relative;
+        min-height: 1px;
+    }
+
+    .col-sm-7 {
+        float: left;
+        width: 58.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-8 {
+        float: left;
+        width: 66.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-9 {
+        float: left;
+        width: 75%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-10 {
+        float: left;
+        width: 83.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-11 {
+        float: left;
+        width: 91.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-sm-12 {
+        float: left;
+        width: 100%;
+        position: relative;
+        min-height: 1px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 939px) {
+
+    .col-md-1 {
+        float: left;
+        width: 8.33%;
+        min-height: 1px;
+        position: relative;
+    }
+    .col-md-2 {
+        float: left;
+        width: 16.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-3 {
+        float: left;
+        width: 25%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-4 {
+        float: left;
+        width: 33.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-5 {
+        float: left;
+        width: 41.66%;
+        position: relative;
+        min-height: 1px;
+    }
+
+    .col-md-6 {
+        float: left;
+        width: 50%;
+        position: relative;
+        min-height: 1px;
+    }
+
+    .col-md-7 {
+        float: left;
+        width: 58.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-8 {
+        float: left;
+        width: 66.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-9 {
+        float: left;
+        width: 75%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-10 {
+        float: left;
+        width: 83.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-11 {
+        float: left;
+        width: 91.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-md-12 {
+        float: left;
+        width: 100%;
+        position: relative;
+        min-height: 1px;
+    }
+}
+
+@media (min-width: 940px) {
+
+    .col-lg-1 {
+        float: left;
+        width: 8.33%;
+        min-height: 1px;
+        position: relative;
+    }
+    .col-lg-2 {
+        float: left;
+        width: 16.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-3 {
+        float: left;
+        width: 25%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-4 {
+        float: left;
+        width: 33.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-5 {
+        float: left;
+        width: 41.66%;
+        position: relative;
+        min-height: 1px;
+    }
+
+    .col-lg-6 {
+        float: left;
+        width: 50%;
+        position: relative;
+        min-height: 1px;
+    }
+
+    .col-lg-7 {
+        float: left;
+        width: 58.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-8 {
+        float: left;
+        width: 66.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-9 {
+        float: left;
+        width: 75%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-10 {
+        float: left;
+        width: 83.33%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-11 {
+        float: left;
+        width: 91.66%;
+        position: relative;
+        min-height: 1px;
+    }
+    .col-lg-12 {
+        float: left;
+        width: 100%;
+        position: relative;
+        min-height: 1px;
+    }
+}
+
+.pointer {cursor: pointer;}
+
+.text-primary{
+    color:#007bff;
+}
+
+.text-success{
+    color: #28a745;
+}
+.text-warning{
+    color: #ffc107;
+}
+.text-danger{
+    color: #dc3545;
+}
+
+.text-center{
+    text-align: center;
+}
+

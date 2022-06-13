@@ -1,0 +1,55 @@
+// *
+// * SweetAlert2
+// *
+.swal2-show {
+    font-size: 14px !important;
+}
+
+
+// *
+// * Dropzone
+// *
+.dropzone {
+	border: 2px dashed #0087F7 !important;
+    border-radius: 5px !important;
+	background: white !important;
+	padding: 40px 20px !important;
+	
+	&.dz-remove-progress .dz-progress {
+		display: none;
+	}
+
+	.dz-preview .dz-success-mark {
+		margin-top: -35px;
+	}
+	
+	.dz-preview .dz-remove {
+		z-index: 999;
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		right: -10px;
+		top: -10px;
+		color: white;
+		background: red;
+		padding: 6px;
+		border-radius: 50%;
+		box-shadow: 2px 2px 5px #00000061;
+		
+		i {
+			cursor: pointer;
+		}
+	}
+
+	.dz-message {
+		font-weight: 400;
+        font-size: 13px;
+
+        .note {
+			font-size: 0.8em;
+			font-weight: 200;
+			display: block;
+			margin-top: 1.4rem;
+		}
+	}
+}

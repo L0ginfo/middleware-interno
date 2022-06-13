@@ -1,0 +1,62 @@
+.lf-log-accordion {
+    transition: .2s;
+    display: none;
+    background: #f1f0f0ad;
+    border: 1px solid #bfbebe96;
+    border-radius: 3px;
+    padding: 14px 1px;
+    margin-bottom: 25px;
+}
+.lf-log-accordion.active {
+    display: block;
+}
+
+.log_filter_submit, .log_filter_remove {
+    margin-top: 15px;
+}
+
+.log_filter_submit i, .log_filter_remove i {
+    top: 2.5px;
+}
+
+
+.btn.mini {
+    width: 29px;
+    height: 26px;
+    padding: 7px 18px;
+    margin: 0 0 0 6px;
+    transition: 0.2s;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.btn.mini.invert-color.btn-primary {
+    transition: 0.2s;
+}
+
+.btn.mini.invert-color.btn-primary:active .badge {
+    background-color: #204d74;
+}
+
+.btn.mini.invert-color.btn-primary .badge {
+    color: #fff;
+    background-color: #00AAFF;
+}
+
+.btn.mini .badge {
+    padding: 0px 0px;
+    top: -5px;
+    left: -9px;
+    width: 18px;
+    height: 18px;
+}
+
+.btn.mini .badge i {
+    transform: translate(0px, 15%);
+}
+
+.btn.mini:hover,
+.btn.mini:focus {
+    transform: translateY(-5%);
+    box-shadow: 0px 3px 9px -4px #000;
+    outline: -webkit-focus-ring-color auto 0px;
+}

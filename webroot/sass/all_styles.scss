@@ -1,0 +1,43 @@
+@import 'fonts/open-sans';
+@import 'fonts/material-icons';
+
+// General Styles
+@import './../custom_pontanegra/css/datatables.min.scss';
+@import './../bower_components/metisMenu/dist/metisMenu.min.scss';
+@import './../bower_components/assets/css/demo.scss';
+@import './../custom_pontanegra/dist/css/sb-admin-2.scss';
+@import './../custom_pontanegra/css/bootstrap-datepicker3.scss';
+@import '_general_styles';
+@import './../bower_components/bootstrap-select/dist/css/bootstrap-select.scss';
+@import './../bower_components/assets/css/main.scss';
+@import './../custom_pontanegra/css/animations.scss';
+@import '_menu.scss';
+
+// Components
+@import 'Components/_background_loading';
+@import 'Components/_copy_to_clipboard';
+@import 'Components/_list_mobile.scss';
+@import 'Components/_input_codebar.scss';
+
+// Plugins
+@import 'plugins/_selectpicker.scss';
+ 
+// Styles
+@import '_buttons'; 
+@import '_loader';
+@import '_utils';
+@import '_plugins';
+@import 'DocumentacaoEntrada/_styles';
+@import 'OrdensServicoPendentes/_operacao_separacao';
+@import 'OrdensServicoPendentes/_operacao_descarga';
+@import 'OrdensServicoPendentes/_operacao_carga';
+@import 'Pages/FormacaoCargaVolumeItens/_add';
+@import 'Pages/ConversaoSkus/_add';
+@import 'Pages/PesagemVeiculos/_realizar_pesagens';
+@import 'Pages/Viagens/_form';
+@import 'Pages/MovContainers/_index';
+@import 'Pages/DashboardPortarias/_index';
+
+@import '_responsive';
+
+ 

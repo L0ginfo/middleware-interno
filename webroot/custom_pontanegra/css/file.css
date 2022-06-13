@@ -1,0 +1,24 @@
+.form-control{
+    height:100% !important;
+}
+input{
+    width: 100%  !important;
+}
+.input{
+    width: 100%  !important;
+}
+::-webkit-file-upload-button {
+    color: white;
+    background-color: #2196f3;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    padding: 10px;
+}
+/* for poor sods using IE */
+::-ms-browse {
+    color: white;
+    background-color: #00AAFF;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    padding: 10px;
+}

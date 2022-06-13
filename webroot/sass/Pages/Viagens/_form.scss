@@ -1,0 +1,43 @@
+.viagens {
+    .selectVagao {
+        .input-group-btn {
+            top: -5px;
+        }
+    }
+
+    .lf-panel {
+        height: 541px;
+        margin-bottom: 15px;
+    }
+
+    .listagem-vagoes {
+        .dt-buttons.btn-group {
+            display: none;
+        }
+
+        #resultados_wrapper {
+            overflow: scroll;
+            height: 300px;
+        }
+    }
+
+    #documentos-entrada, #documentos-saida, #containers {
+        .table-responsive {
+            overflow: scroll;
+            height: 270px;
+        }
+    }
+
+    .selected-vagao {
+        background-color: #f9951752 !important;
+        box-shadow: 1px 2px 5px -3px #000 !important;
+    }
+
+    .vagao {
+        cursor: pointer;
+    }
+
+    table th:nth-child(2) {
+        z-index: 0;
+    }
+}

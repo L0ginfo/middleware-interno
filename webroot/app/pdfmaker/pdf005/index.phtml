@@ -1,0 +1,332 @@
+<!--mpdf
+
+<htmlpageheader name="header1">
+
+<table style="table-layout: fixed;width:100%;">
+<tr>
+<td style="width:20%"><img src="resources/logo001.jpg" style="width:200px; height:85px"></td>
+<td style="text-align:center; width:60%; font-size:10pt;">DEMONSTRATIVO DO LOTE</td>
+<td style="text-align:right; width:20%"><img src="resources/qr-code.png" style="width:100px; height:100px"></td>
+</tr>
+</table>
+<div style="border-bottom:1px solid #000; width:100%;"></div>
+
+</htmlpageheader>
+
+<htmlpagefooter name="footer1">
+Página {PAGENO}/{nb} - Gerado em {DATE d/m/Y H:i:s} - Usuário: <?= $this->USUARIO_RODAPE ?>
+</htmlpagefooter>
+
+mpdf-->
+
+<!--mpdf
+
+<sethtmlpageheader name="header1" page="all" value="on" show-this-page="1" />
+<sethtmlpagefooter name="footer1" value="on" />
+
+mpdf-->
+
+
+<style>
+
+body {
+    font-family:arial;
+    font-size:8pt;
+}
+
+table td {
+    width:7px;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing: 0px;
+    font-size:8pt;
+    width:700px
+}
+
+.td-border td{
+    border:1px solid black;
+
+}
+
+.grayed-subtitle {
+    background-color:#F2F2F2;
+    text-align:center;
+    letter-spacing:5px;
+    font-weight:bold;
+}
+
+</style>
+
+
+<table style="table-layout: fixed;width:100%;">
+
+<tr>
+<td colspan="100" style="border-bottom:1px solid #000;"></td>
+</tr>
+
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+<tr>
+<td colspan="100" class="grayed-subtitle">INFORMAÇÕES PROCESSO / LOTE</td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Lote:</span><?= $this->LOTE_ID ?></td>
+<td colspan="50"><span style="font-weight:bold;">Importador:</span><?= $this->IMPORTADOR ?></td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Regime:</span><?= $this->REG_NOME ?></td>
+<td colspan="50"><span style="font-weight:bold;">Despachante:</span><?= $this->DESPACHANTE ?></td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Viagem/Navio:</span><?= '' ?></td>
+<td colspan="50"><span style="font-weight:bold;">País de Origem:</span><?= $this->PAIS_NOME ?></td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Conhecimento:</span><?= $this->CONHECIMENTO ?></td>
+<td colspan="50"><span style="font-weight:bold;">CIF do Dolar:</span><?= $this->CIF_DOLAR ?></td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Data Emissão:</span><?= $this->EMISSAO ?></td>
+<td colspan="50"><span style="font-weight:bold;">Quantidades Volumes:</span><?= $this->f_d4($this->VOLUMES) ?></td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Data Vencimento:</span><?= $this->VENCIMENTO ?></td>
+<td colspan="50"><span style="font-weight:bold;">Peso Bruto:</span><?= $this->f_d3($this->PESO_BRUTO) ?></td>
+</tr>
+<tr>
+<td colspan="50"><span style="font-weight:bold;">Manifesto:</span><?= $this->LOTE_MANIFESTO ?></td>
+<td colspan="50"><span style="font-weight:bold;">Peso Líquido:</span><?= $this->f_d3($this->PESO_LIQUIDO) ?></td>
+</tr>
+
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+<tr>
+<td colspan="100" class="grayed-subtitle">GERAIS CARGA / CONTEINERES</td>
+</tr>
+
+<tr class="td-border">
+<td colspan="10" style="text-align:center; font-weight:bold;">Container</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Tipo</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Volumes</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Especie</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Produto</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Peso Bruto</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Tipo Doc</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Núm Doc</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Tara</td>
+<td colspan="10" style="text-align:center; font-weight:bold;">Peso Líquido</td>
+</tr>
+
+<?php foreach($this->CARGA as $row): ?>
+<?php $row = (object) $row; ?>
+<tr class="td-border">
+<td colspan="10" style="text-align:center"><?= $row->CONTAINER ?></td>
+<td colspan="10" style="text-align:center"><?= $row->CNT_TIPO ?></td>
+<td colspan="10" style="text-align:center"><?= $row->VOLUMES ?></td>
+<td colspan="10" style="text-align:center"><?= $row->ESPECIE ?></td>
+<td colspan="10" style="text-align:center"><?= $row->PRODUTO ?></td>
+<td colspan="10" style="text-align:center"><?= $row->PESO_BRUTO ?></td>
+<td colspan="10" style="text-align:center"><?= $row->TIPO_DOCUMENTO ?></td>
+<td colspan="10" style="text-align:right"> <?= $row->NUMERO_DOCUMENTO ?></td>
+<td colspan="10" style="text-align:right"> <?= $this->f_d3($row->CNT_TARA) ?></td>
+<td colspan="10" style="text-align:right"> <?= $this->f_d3($row->PESO_LIQUIDO) ?></td>
+</tr>
+<?php endforeach; ?>
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+<tr>
+<td colspan="100" class="grayed-subtitle">LOCALIZAÇÃO</td>
+</tr>
+
+<tr class="td-border">
+<td colspan="25" style="text-align:center; font-weight:bold;">Armazém</td>
+<td colspan="25" style="text-align:center; font-weight:bold;">Quantidade</td>
+<td colspan="25" style="text-align:center; font-weight:bold;">Metragem Cúbica</td>
+<td colspan="25" style="text-align:center; font-weight:bold;">Metragem Quadrada</td>
+</tr>
+
+<?php foreach($this->LOCALIZACAO as $row): ?>
+<?php $row = (object) $row; ?>
+<tr class="td-border">
+<td colspan="25" style="text-align:center"><?= $row->ARMAZEM ?></td>
+<td colspan="25" style="text-align:center"><?= $row->QUANTIDADE ?></td>
+<td colspan="25" style="text-align:center"><?= $row->SALDO_M3 ?></td>
+<td colspan="25" style="text-align:center"><?= $row->SALDO_M2 ?></td>
+</tr>
+<?php endforeach; ?>
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+
+</table>
+
+
+
+
+
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+<tr>
+<td colspan="100" class="grayed-subtitle">SERVIÇOS</td>
+</tr>
+
+<tr class="td-border">
+<td colspan="20" style="text-align:center; font-weight:bold;">Container</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Descrição Serviço</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Data Solicitação</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Data Inicio</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Data Fim</td>
+</tr>
+
+<?php foreach($this->SERVICOS as $row): ?>
+<?php $row = (object) $row; ?>
+<tr class="td-border">
+<td colspan="20" style="text-align:center"><?= $row->CNT_ID ?></td>
+<td colspan="20" style="text-align:center"><?= $row->SERVICO ?></td>
+<td colspan="20" style="text-align:center"><?= $this->f_d($row->DATA_SOLICITACAO) ?></td>
+<td colspan="20" style="text-align:center"><?= substr($row->DT_INICIO, 0, 19) ?></td>
+<td colspan="20" style="text-align:center"><?= substr($row->DT_FIM, 0, 19) ?></td>
+</tr>
+<?php endforeach; ?>
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+
+</table>
+
+
+
+
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+<tr>
+<td colspan="100" class="grayed-subtitle">DEVOLUÇÃO VAZIO</td>
+</tr>
+
+<tr class="td-border">
+<td colspan="20" style="text-align:center; font-weight:bold;">Container</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Data</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">CESV</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Placa Veículo</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Motorista</td>
+</tr>
+
+<?php foreach($this->DEVOLUCAO as $row): ?>
+<?php $row = (object) $row; ?>
+<tr class="td-border">
+<td colspan="20" style="text-align:center"><?= $row->CONTAINER ?></td>
+<td colspan="20" style="text-align:center"><?= substr($row->DT_SAI_CNT, 0, 19) ?></td>
+<td colspan="20" style="text-align:center"><?= $row->CESV ?></td>
+<td colspan="20" style="text-align:center"><?= $row->PLACA ?></td>
+<td colspan="20" style="text-align:center"><?= $row->MOTORISTA ?></td>
+</tr>
+<?php endforeach; ?>
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+
+</table>
+
+
+
+
+
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+<tr>
+<td colspan="100" class="grayed-subtitle">DA/DI/DDE</td>
+</tr>
+
+<tr class="td-border">
+<td colspan="20" style="text-align:center; font-weight:bold;">Documento</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Data Registro</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Data Desembaraço</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Canal</td>
+<td colspan="20" style="text-align:center; font-weight:bold;">Qtde Liberada</td>
+</tr>
+
+<?php foreach($this->DADIDDE as $row): ?>
+<?php $row = (object) $row; ?>
+<tr class="td-border">
+<td colspan="20" style="text-align:center"><?= $row->DOC ?></td>
+<td colspan="20" style="text-align:center"><?= $row->DT_REGISTRO ?></td>
+<td colspan="20" style="text-align:center"><?= $row->DT_DESEMBARACO ?></td>
+<td colspan="20" style="text-align:center"><?= $row->CANAL ?></td>
+<td colspan="20" style="text-align:center"><?= $this->f_d3($row->QTD_LIBERADA) ?></td>
+</tr>
+<?php endforeach; ?>
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+<tr>
+<td colspan="100" class="grayed-subtitle">AVARIA</td>
+</tr>
+
+<tr class="td-border">
+<td colspan="25" style="text-align:center; font-weight:bold;">Termo</td>
+<td colspan="25" style="text-align:center; font-weight:bold;">Data Geração</td>
+<td colspan="25" style="text-align:center; font-weight:bold;">Ordem de Serviço</td>
+<td colspan="25" style="text-align:center; font-weight:bold;">Produto</td>
+</tr>
+
+<?php foreach($this->AVARIA as $row): ?>
+<?php $row = (object) $row; ?>
+<tr class="td-border">
+<td colspan="25" style="text-align:center"><?= $row->NUMERO_TERMO ?></td>
+<td colspan="25" style="text-align:center"><?= $row->TER_DT_GERACAO ?></td>
+<td colspan="25" style="text-align:center"><?= $row->OS_ID ?></td>
+<td colspan="25" style="text-align:center"><?= $row->LITEM_DESCRICAO ?></td>
+</tr>
+<tr class="td-border">
+<td colspan="100" style="text-align:center">Descrição da avaria: <?= $row->TER_OBS ?></td>
+</tr>
+<?php endforeach; ?>
+
+<tr>
+<td colspan="100" style="height:4px"></td>
+</tr>
+
+</table>

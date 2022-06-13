@@ -1,0 +1,19 @@
+Regras do envio automático de NF/Boleto/Demonstrativo
+
+Os arquivos devem ter nomes específicos
+
+Nome do arquivo de nota fiscal.
+
+NF ??? XXXXXXX.pdf
+
+Onde ??? é o número da nota fiscal e XXXXX é o nome da empresa ou qualquer texto.
+
+Nome do arquivo de boleto
+
+Boleto NF ??? XXXXXXX.pdf
+
+Onde ??? é o número da nota fiscal e XXXXX é o nome da empresa ou qualquer texto.
+
+Obs: O texto deve ser como esta escrito como acima em relação a maiusculo/minusculo, boleto com B maiusculo e NF também.
+
+O demonstrativo é gerado automáticamente.

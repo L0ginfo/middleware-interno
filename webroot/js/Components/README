@@ -1,0 +1,24 @@
+## Como criar classes e usá-las ##
+
+# No arquivo da Classe fazer dessa forma:
+
+class Main {
+    func() {
+
+    }
+}
+
+// ao final faça ela ficar global
+window.Main = Main
+
+# No arquivo que irá utilizar essa classe, chamar dessa forma:
+const oMain = new window.Main()
+
+
+--------------------------------------------------------------------
+
+## Para utilizar Object global bastará criar a var/const ##
+
+var DoAnything = {
+    init: () => {}
+}

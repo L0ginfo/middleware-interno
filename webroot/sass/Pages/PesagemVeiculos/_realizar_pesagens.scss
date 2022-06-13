@@ -1,0 +1,92 @@
+.realizarPesagens {
+
+    .pesagens {
+
+        .pesagem {
+            border: 10px solid white;
+            background: #ccc3;
+            border-radius: 16px;
+            padding: 7px 10px !important;
+            margin: 10px 0;
+            transition: .3s;
+            position: relative;
+
+            .header-veiculo {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 7px;
+
+                .actions {
+                    margin-right: 5px;
+                }
+                
+                .placa-veiculo {
+                    font-size: 24px;
+                    font-weight: 600;
+                    width: 150px;
+                    height: 52px;
+                }
+            }
+
+            .body-pesos {
+                margin-bottom: 47px;
+
+                .registro-peso {
+
+
+                    .dados-pesagem .input-peso {
+                        border: 1px solid red;
+                        box-shadow: 0px 0px 15px -3px red;
+                        background: #f19393;
+                    }
+
+                    &.registrado {
+
+                        .dados-pesagem .input-peso {
+                            border: 1px solid green;
+                            box-shadow: 0px 0px 15px -3px green;
+                            background: #e2f5e2;
+                        }
+
+                    }
+
+                    label {
+                        display: none;
+                    }
+
+                    &:nth-child(1) {
+
+                        label {
+                            display: block ;
+                        }
+                    }
+
+                    .sequencia-peso {
+                        display: flex;
+                        margin-top: 6px;
+                    }
+
+                    .peso-area {
+                        width: 89px;
+                    }
+
+                    .pesagem-tipo-area {
+                        width: 121px;
+                    }
+
+                    .other-actions {
+                        width: 73px;
+                    }
+                }
+                
+            }
+
+            .footer-pesos {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                padding: 0px 10px 7px 10px;
+            }
+        }
+    }
+}

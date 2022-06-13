@@ -1,0 +1,340 @@
+<htmlpageheader name="header1">
+	<table style="table-layout: fixed;width:100%;">
+		<tr>
+			<td style="width:20%"><img src="resources/logo001.jpg" style="width:200px; height:85px"></td>
+			<td style="text-align:center; width:60%; font-size:10pt;">DEMONSTRATIVO DE CÁLCULO</td>
+			<td style="text-align:right; width:20%"><img src="resources/qr-code.png" style="width:100px; height:100px"></td>
+		</tr>
+	</table>
+	<div style="border-bottom:1px solid #000; width:100%;"></div>
+</htmlpageheader>
+
+<htmlpagefooter name="footer1">
+	Página {PAGENO}/{nb} - Gerado em <?= $this->GERACAO_HORA ?> - Usuário: <?= $this->GERACAO_USUARIO ?>
+</htmlpagefooter>
+
+<sethtmlpageheader name="header1" page="all" value="on" show-this-page="1" />
+<sethtmlpagefooter name="footer1" value="on" />
+
+<style>
+	body {
+    font-family:arial;
+    font-size:8pt;
+	}
+
+	table td {
+	    width:7px;
+	}
+
+	table {
+	    border-collapse:collapse;
+	    border-spacing: 0px;
+	    font-size:8pt;
+	    width:700px
+	}
+
+	.td-border td{
+	    border:1px solid black;
+
+	}
+
+	.grayed-subtitle {
+	    background-color:#F2F2F2;
+	    text-align:center;
+	    letter-spacing:5px;
+	    font-weight:bold;
+	}
+</style>
+
+<?php
+function mask($val, $mask) {
+	$maskared = '';
+	$k = 0;
+	for ($i = 0; $i<=strlen($mask)-1; $i++) {
+		if ($mask[$i] == '#') {
+			if(isset($val[$k]))
+				$maskared .= $val[$k++];
+		} else {
+			if (isset($mask[$i]))
+				$maskared .= $mask[$i];
+		}
+	}
+	return $maskared;
+}
+function formataData ($formataData) {
+	$dataHora = implode("/", explode("-", $formataData ));
+	$dataHora = explode(" ", $dataHora);
+	$formato = array_reverse(explode("/", $dataHora[0]));
+	$hora = explode(".", $dataHora[1]);	
+	$data = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];
+	return $data;
+}
+?>
+
+<table style="table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="30" style="width:30%; font-size:14pt;"><span>CAPA: </span><span style="font-weight:bold;"><?= $this->NFM_ID ?></span></td>
+		<td colspan="35" style="width:35%; font-size:14pt;"><span>DEMONSTRATIVO: </span><span style="font-weight:bold;"><?= $this->NFIM_ID ?></span></td>
+		<td colspan="35" style="width:35%; font-size:14pt;" align="right"><span>NOTA&nbsp;FISCAL: </span><span style="font-weight:bold;"><?= $this->NUM_NFSE ?></span></td>
+	</tr>
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">Regime: </span><?= $this->REG_ID ?> - <?= $this->REG_NOME ?></td>
+	</tr>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;">Tarifa 01: </span><?= $this->NFI_TAR_ID1 ?> - <?= $this->NFI_TAR1_DESC ?></td>
+	</tr>
+	<!--tr>
+	<td colspan="100"><span style="font-weight:bold;">Tarifa 02:</span></td>
+	</tr-->
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;">Opção tarifa: </span><?= $this->NFI_OPTA_ID ?> - <?= $this->NFI_OPTA_DESC ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="border-bottom:1px solid #000;"></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<tr>
+		<td colspan="100" class="grayed-subtitle">BENEFICIÁRIO</td>
+	</tr>
+	<tr>
+		<td colspan="20"><span style="font-weight:bold;">Código:</span><?= $this->BEN_ID ?></td>
+		<td colspan="50"><span style="font-weight:bold;">Nome:</span><?= $this->BENEF_NOME ?></td>
+		<td colspan="30" align="right"><span style="font-weight:bold;">CNPJ/CPF:</span><?= $this->BENEF_CGC ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<tr>
+		<td colspan="100" class="grayed-subtitle">COMISSÁRIA</td>
+	</tr>
+	<tr>
+		<td colspan="20"><span style="font-weight:bold;">Código:</span><?= $this->COM_ID ?></td>
+		<td colspan="50"><span style="font-weight:bold;">Nome:</span><?= $this->COMISS_NOME ?></td>
+		<td colspan="30" align="right"><span style="font-weight:bold;">CNPJ/CPF:</span><?= $this->COMISS_CGC ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<tr>
+		<td colspan="100" class="grayed-subtitle">CLIENTE</td>
+	</tr>
+	<tr>
+		<td colspan="20"><span style="font-weight:bold;">Código:</span><?= $this->NF_CLI_CQF ?></td>
+		<td colspan="80"><span style="font-weight:bold;">Nome:</span><?= $this->CP_CLI_NOME_NF ?></td>
+	</tr>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;">Endereço:</span><?= $this->CP_ENDERECO ?></td>
+	</tr>
+	<tr>
+		<td colspan="33"><span style="font-weight:bold;">Bairro:</span><?= $this->CP_BAIRRO ?></td>
+		<td colspan="33"><span style="font-weight:bold;">Cidade:</span><?= $this->CP_CIDADE ?></td>
+		<td colspan="17"><span style="font-weight:bold;">Estado:</span><?= $this->CP_UF ?></td>
+		<td colspan="17" align="right"><span style="font-weight:bold;">CEP:</span><?= $this->CP_CEP ?></td>
+	</tr>
+	<tr>
+		<td colspan="33"><span style="font-weight:bold;">CNPJ/CPF::</span><?= $this->CP_CGC_NF ?></td>
+		<td colspan="33"><span style="font-weight:bold;">IE:</span><?= $this->CP_IE_NF ?></td>
+		<td colspan="34"><span style="font-weight:bold;">IM:</span><?= $this->CP_IM_NF ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<tr>
+		<td colspan="100" class="grayed-subtitle">FATURAR PARA</td>
+	</tr>
+	<tr>
+		<td colspan="20"><span style="font-weight:bold;">Código:</span><?= $this->CC_CLI_ID_NF ?></td>
+		<td colspan="80"><span style="font-weight:bold;">Nome:</span><?= $this->CC_CLI_NOME_NF ?></td>
+	</tr>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;">Endereço:</span><?= $this->CC_ENDERECO ?></td>
+	</tr>
+	<tr>
+		<td colspan="33"><span style="font-weight:bold;">Bairro:</span><?= $this->CC_BAIRRO ?></td>
+		<td colspan="33"><span style="font-weight:bold;">Cidade:</span><?= $this->CC_CIDADE ?></td>
+		<td colspan="17"><span style="font-weight:bold;">Estado:</span><?= $this->CC_UF ?></td>
+		<td colspan="17" align="right"><span style="font-weight:bold;">CEP:</span><?= $this->CC_CEP ?></td>
+		</tr>
+	<tr>
+		<td colspan="33"><span style="font-weight:bold;">CNPJ/CPF::</span><?= $this->CC_CGC_NF ?></td>
+		<td colspan="33"><span style="font-weight:bold;">IE:</span><?= $this->CC_IE_NF ?></td>
+		<td colspan="34"><span style="font-weight:bold;">IM:</span><?= $this->CC_IM_NF ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<tr>
+		<td colspan="100" class="grayed-subtitle">TARIFAS APLICADAS</td>
+	</tr>
+	<tr>
+		<td colspan="33"><span style="font-weight:bold;">Moeda::</span><?= $this->MOE_NOME ?></td>
+		<td colspan="33"><span style="font-weight:bold;">Data/Cotação:</span><?= $this->f_d($this->DATA_COTACAO) ?></td>
+		<td colspan="34"><span style="font-weight:bold;">Valor:</span><?= $this->f_d($this->NFI_COTACAO) ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+</table>
+
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<tr>
+		<td colspan="100" class="grayed-subtitle">NAVIO/ATRACAÇÃO</td>
+	</tr>
+	<tr>
+		<td colspan="10"><span style="font-weight:bold;">IMO: </span><?= $this->navio ? $this->navio : "---"; ?></td>
+		<td colspan="30"><span style="font-weight:bold;">Nome: </span><?= $this->nome ? $this->nome : "---"; ?></td>
+		<td colspan="30"><span style="font-weight:bold;">Viagem: </span><?= $this->viagem ? $this->viagem : "---"; ?></td>
+		<td colspan="30" align="right"><span style="font-weight:bold;">Atracação: </span><?= $this->cod_atracacao ? $this->cod_atracacao : "---"; ?></td>
+	</tr>
+	 <tr>
+		<td colspan="10"><span style="font-weight:bold;">Berço: </span><?= $this->ber_nome ? $this->ber_nome : "---"; ?></td>
+		<td colspan="30"><span style="font-weight:bold;">Programação: </span><?= $this->prog_id ? $this->prog_id : "---"; ?></td>
+		<td colspan="60"><span style="font-weight:bold;">Cesv: </span><?= $this->cesv_id ? $this->cesv_id : "---"; ?></td>
+	</tr>
+	<tr>
+		<td colspan="10"><span style="font-weight:bold;">Calado: </span><?= $this->calado ? $this->calado : "---"; ?></td>
+		<td colspan="30"><span style="font-weight:bold;">Loa: </span><?= $this->loa ? $this->loa : "---"; ?></td>
+		<td colspan="60"><span style="font-weight:bold;">DWT: </span><?= $this->dwt ? $this->dwt : "---"; ?></td>
+		
+	</tr>
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">Arqueação Bruta: </span><?= $this->arq_bruta ? $this->arq_bruta : "---"; ?></td>
+		<td colspan="50" align="right"><span style="font-weight:bold;">Arqueação Líquida: </span><?= $this->arq_liquida ? $this->arq_liquida : "---"; ?></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<?php
+			$formataData = $this->prog_dt_chegada;
+			$prog_dt_chegada = formataData($formataData); 
+		?>
+		<td colspan="50"><span style="font-weight:bold;">Data Chegada: </span><?= $prog_dt_chegada ? $prog_dt_chegada : "---"; ?></td>
+		<?php
+			$formataData = $this->prog_dt_saida;
+			$prog_dt_saida = formataData($formataData); 
+		?>
+		<td colspan="50" align="right"><span style="font-weight:bold;">Data Saída: </span><?= $prog_dt_saida ? $prog_dt_saida : "---"; ?></td>
+	</tr>
+	<tr>
+		<?php
+			$formataData = $this->dt_atracacao;
+			$dt_atracacao = formataData($formataData); 
+		?>
+		<td colspan="50"><span style="font-weight:bold;">Data Atracação: </span><?= $dt_atracacao ? $dt_atracacao : "---"; ?></td>
+		<?php
+			$formataData = $this->dt_desatracacao;
+			$dt_desatracacao = formataData($formataData); 
+		?>
+		<td colspan="50" align="right"><span style="font-weight:bold;">Data Desatracação: </span><?= $dt_desatracacao ? $dt_desatracacao : "---"; ?></td>
+	</tr>
+	<tr>
+		<?php
+			$formataData = $this->dt_ini_op;
+			$dt_ini_op = formataData($formataData); 
+		?>
+		<td colspan="50"><span style="font-weight:bold;">Data Início Operação: </span><?= $dt_ini_op ? $dt_ini_op : "---"; ?></td>
+		<?php
+			$formataData = $this->dt_ter_op;
+			$dt_ter_op = formataData($formataData); 
+		?>
+		<td colspan="50" align="right"><span style="font-weight:bold;">Data Fim Operação: </span><?= $dt_ter_op ? $dt_ter_op : "---"; ?></td>
+	</tr> 
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+</table>
+
+<table autosize="1.3" style=" table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="100" class="grayed-subtitle">ARMAZENAGEM</td>
+	</tr>
+	<tr class="td-border">
+		<td colspan="12" style="text-align:center; font-weight:bold;">Período</td>
+		<td colspan="12" style="text-align:center; font-weight:bold;">Início</td>
+		<td colspan="12" style="text-align:center; font-weight:bold;">Final</td>
+		<td colspan="12" style="text-align:center; font-weight:bold;">Qtde Peças</td>
+		<td colspan="12" style="text-align:center; font-weight:bold;">Carregado</td>
+		<td colspan="12" style="text-align:center; font-weight:bold;">Saldo</td>
+		<td colspan="12" style="text-align:center; font-weight:bold;">% Armaz</td>
+		<td colspan="16" style="text-align:center; font-weight:bold;">Total Armaz R$</td>
+	</tr>
+	<?php $armTotal = 0; ?>
+	<?php foreach($this->ARMAZENAGEM as $row): ?>
+		<?php $row = (object) $row; ?>
+		<?php $armTotal += $row->VALOR; ?>
+		<tr class="td-border">
+			<td colspan="12" style="text-align:center"><?= $row->PERIODO ?></td>
+			<td colspan="12" style="text-align:center"><?= $this->f_d($row->DATAINI) ?></td>
+			<td colspan="12" style="text-align:center"><?= $this->f_d($row->DATAFIM) ?></td>
+			<td colspan="12" style="text-align:center"><?= $this->f_f($row->QTD_PECAS) ?></td>
+			<td colspan="12" style="text-align:center"><?= $this->f_f($row->CARREGADO) ?></td>
+			<td colspan="12" style="text-align:center"><?= $this->f_f($row->SALDO) ?></td>
+			<td colspan="12" style="text-align:center"><?= $this->f_d4($row->TARIFA) ?></td>
+			<td colspan="16" style="text-align:right"><?= $this->f_m($row->VALOR) ?></td>
+		</tr>
+	<?php endforeach; ?>
+	<tr>
+		<td colspan="84" style="font-weight:bold; text-align:right">Total de Armazenagem Períodos</td>
+		<td colspan="16" style="text-align:right; border:1px solid black;">0,00</td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+</table>
+
+<table  autosize="1.3" style=" table-layout: fixed;width:100%;">
+	<tr>
+		<td colspan="100" class="grayed-subtitle">OPERAÇÃO/SERVIÇOS</td>
+	</tr>
+	<tr class="td-border">
+		<td colspan="60" style="font-weight:bold;">Descrição</td>
+		<td colspan="13" style="text-align:right; font-weight:bold;">Qtd.</td>
+		<td colspan="13" style="text-align:right; font-weight:bold;">R$ Unitário</td>
+		<td colspan="14" style="text-align:right; font-weight:bold;">Total Oper. R$</td>
+	</tr>
+	<?php $servTotal = $servDesc = 0; $nfimd_justif = [];?>
+	<?php foreach($this->SERVICOS as $row): ?>
+		<?php $row = (object) $row; ?>
+		<?php if (!$this->VIEW_LINE_ALL && !$row->VIEW_LINE) continue; ?>
+		<?php $servTotal += $row->NFSM_VL_TOT; ?>
+		<?php $servDesc += $row->VAL_DESCON; ?>
+		<?php $nfimd_justif[] = $row->NFIMD_JUSTIF; ?>
+		<tr class="td-border">
+			<td colspan="60" style="text-align:left"><?= $row->SR_ID ?> - <?= $row->SR_DESCRICAO ?></td>
+			<td colspan="13" style="text-align:right"><?= $row->NFSM_QTD_SERV ?></td>
+			<td colspan="13" style="text-align:right"><?= $this->f_m($row->NFSM_VL_TOT / $row->NFSM_QTD_SERV) ?></td>
+			<td colspan="14" style="text-align:right"><?= $this->f_m($row->NFSM_VL_TOT) ?></td>
+		</tr>
+	<?php endforeach; ?>
+	<tr>
+		<td colspan="86" style="font-weight:bold; text-align:right">Total Operação + Serviços</td>
+		<td colspan="14" style="text-align:right; border:1px solid black;"><?= $this->f_m($servTotal) ?></td>
+	</tr>
+	<tr>
+		<td colspan="86" style="font-weight:bold; text-align:right">Total Geral Armazenagem + Operação + Serviços<?= $servDesc ? ' - Descontos' : '' ?></td>
+		<td colspan="14" style="text-align:right; border:1px solid black;"><?= $this->f_m($servTotal - $servDesc) ?></td>
+	</tr>
+	<tr>
+		<td colspan="100" style="height:4px"></td>
+	</tr>
+	<!-- <tr>
+		<td colspan="100" class="grayed-subtitle">OBSERVAÇÕES</td>
+	</tr>
+	<tr>
+		<td colspan="100">
+			<?= $this->OBS ?>
+			<br />
+			<?php $nfimd_justif = array_filter($nfimd_justif); ?>
+			<?php $nfimd_justif = array_unique($nfimd_justif); ?>
+			<?php if (0 && $nfimd_justif): ?>
+			Justificativa Desconto: <?= implode('; ', $nfimd_justif) ?>
+			<?php endif; ?>
+		</td>
+	</tr> -->
+</table>

@@ -1,0 +1,155 @@
+$xs: 448px;
+
+.ordens-servico-pendentes.operacaoSeparacao {
+
+    li {
+        list-style: none;
+    }
+
+    .hasFooter {
+        padding-bottom: 15px;
+    }
+
+    .content {
+        
+        [class^='col-'] {
+            float: none;
+            padding: 0;
+        }
+
+        .picking {
+            position: relative;
+
+            .produto-detalhe {
+                color: #949494;
+    
+                .sku {
+                    font-size: 30px;
+                }
+     
+                .descricao,
+                .informacao-picking {
+                    font-size: 20px;
+                }
+            } 
+        }
+
+        .quantidade {
+            margin-bottom: 10px;
+        }
+
+        .container-pedidos {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 995;
+            height: 0%;
+            width: 100%;
+            transform: translateY(100%);
+            transition: cubic-bezier(1,1.7,0,1.03) .4s;
+            overflow: hidden;
+
+            .backgroud-blur {
+                backdrop-filter: blur(10px);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
+            .backgroud-blur-color {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #ffffffc4;
+            }
+ 
+            &.active {
+                height: 100%;
+                transition: cubic-bezier(1,1.7,0,1.03) .4s;
+                transform: translateY(0%);
+
+                .lf-close {
+                    position: absolute;
+                    right: 1px;
+                    top: 15px;
+                    z-index: 99;
+    
+                    &:after, 
+                    &:before {
+                        background-color: var(--main-color-darker);                
+                    }
+    
+                }
+    
+                .separacao-cargas {
+                    position: fixed;
+                    overflow-y: auto;
+                    max-height: calc(100% - 63px);
+                    margin-top: 70px;    
+                    box-shadow: inset 0px 44px 28px -59px #000;
+    
+                    ul {
+                        margin: 0 !important;
+                        padding: 10px 0px;
+    
+                        li.produto {
+                            padding: 10px 15px;
+                            transition: .3s;
+                            text-shadow: 1px 1px 4px #686767c4;
+                            
+                            &.sem-heuristica {
+                                background: #ff00008c !important;
+ 
+                                &.habilita-estorno {
+                                    background: #1ce41c8c !important;
+
+                                    &:hover,
+                                    &:focus {
+                                    background: #23d0232e !important;
+                                    box-shadow: 0px 0px 26px 1px #4e4e4eb0;
+                                    }
+                                }
+                            }
+
+                            span {
+                                font-weight: bold;
+                            }
+    
+                            &:nth-child(odd) {
+                                background: #d4d4d48c;
+                            }
+    
+                            &:hover,
+                            &:focus {
+                              background: #fdf7f761;
+                              box-shadow: 0px 0px 26px 1px #4e4e4eb0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: $xs) {
+    .ordens-servico-pendentes.operacaoSeparacao {
+
+        .form-control {
+            font-size: 16px;
+            height: 41px;
+
+            &.endereco-digitado.exibindo-composicao {
+                font-size: 13px;
+            }
+        }
+
+        .btn {
+            font-size: 19px;
+        }
+    }
+}

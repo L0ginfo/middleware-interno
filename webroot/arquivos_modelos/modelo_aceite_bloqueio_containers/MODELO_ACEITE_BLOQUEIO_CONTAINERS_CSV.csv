@@ -1,0 +1,3 @@
+container_numero,motivo,ativo
+ABCD1234567,container bloqueado pelo motivo x,1
+ABCD7654321,container aceito pelo motivo y,0

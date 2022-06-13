@@ -1,0 +1,59 @@
+.btn {
+
+    &.mini {
+        width: 29px;
+        height: 26px;
+        padding: 6px 14px;
+        margin: 0 0 0 6px;
+        -webkit-transition: .2s;
+        transition: .2s;
+        outline: -webkit-focus-ring-color auto 0px;
+
+        .badge {
+            padding: 0px 0px;
+            top: -5px;
+            left: -9px;
+            width: 18px;
+            height: 18px;
+
+            .glyphicon {
+
+                &.glyphicon-plus {
+                    top: 1px;
+                    left: 0.5px;
+                }
+
+                &.glyphicon-minus {
+                    top: 3px;
+                }
+            }
+        }
+
+        &:not(.fix-upper-space) {
+            margin-top: 4px;
+        }
+    }
+
+
+    &.fix-upper-space {
+        margin-top: 33px !important;
+    }
+}
+
+@media (max-width: 740px) {
+    .lf-responsive-group {
+        width: 100%;
+
+        .input-group-btn {
+            float: left;
+            width: 100%;
+
+            button {
+                float: left;
+                width: 100%;
+                margin-top: 0px !important;
+                margin-left: 0.5px !important;
+            }
+        }
+    }
+}

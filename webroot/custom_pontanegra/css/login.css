@@ -1,0 +1,130 @@
+.login-panel .divFlutuante {
+    text-align: right;
+    margin-top: 50px;
+    vertical-align: bottom;
+}
+
+.login-panel .panel-body {
+    padding: 10px 25px;
+    overflow: hidden;
+}
+
+.login-panel .panel-body .submit {
+    margin: 25px 0 13px 0;
+}
+
+.login-panel .panel-footer {
+    z-index: 999;
+}
+
+.login-panel {
+    margin-top: 22vh;
+    z-index: 999;
+    animation: fadeForm cubic-bezier(.62,.2,.4,.8);
+    transition: .2s;
+    animation-duration: .5s;
+    overflow: hidden;
+}
+
+.login-panel .input {
+    animation: moveInputLogin cubic-bezier(.62,.2,.4,.8);
+    transition: .5s;
+    animation-duration: .8s; 
+    margin: 0 0 15px 0;   
+}
+
+.login-panel .password {
+    animation-delay: .2s ;
+    margin: 0 0 0 0; 
+}
+
+.login-panel .submit{
+    animation: moveInputSubmit cubic-bezier(.62,.2,.4,.8);
+    transition: .5s;
+    animation-duration: .7s;  
+    animation-delay: .2s;  
+    margin: 0 0 15px 0;   
+}
+
+@keyframes moveInputSubmit {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50% {            
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);            
+    }
+}
+
+@keyframes moveInputLogin {       
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    50% {            
+        transform: translateX(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);            
+    }
+}
+
+@keyframes fadeForm {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: .7;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOverlay {
+    0% {
+        opacity: .75;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .75;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7); 
+    z-index: -1;
+    animation: fadeOverlay;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.login-panel .btn {
+    background-color: #ed1b24e3;
+    border-color: #fb121c;
+}
+
+.login-panel .btn:active:focus, 
+.login-panel .btn:active:hover {
+    background-color: #ed1b24ab;
+    border-color: #ee1a27;
+}
+
+.swal2-popup {
+    font-size: 1.6rem !important;
+}

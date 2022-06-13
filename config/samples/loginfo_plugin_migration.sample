@@ -1,0 +1,30 @@
+<?php
+/**
+* Creator: Silvio Regis 16:45 19/06/2020
+*/
+
+use Phinx\Migration\AbstractMigration;
+
+/**
+* Author: Your_Name [DATE_CREATION]
+*/
+
+class [MIGRATION_NAME] extends AbstractMigration
+{
+    public function change() 
+    {
+        
+    }
+    
+/*
+    public function up() 
+    {
+        
+    }
+
+    public function down() 
+    {
+        
+    }
+*/
+}

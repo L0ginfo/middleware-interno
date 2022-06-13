@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../webfonts/fal-light-300.eot");
+  src: url("../webfonts/fal-light-300.eot?#iefix") format("embedded-opentype"), 
+       url("../webfonts/fal-light-300.woff2") format("woff2"), 
+       url("../webfonts/fal-light-300.woff") format("woff"), 
+       url("../webfonts/fal-light-300.ttf") format("truetype"), 
+       url("../webfonts/fal-light-300.svg#fontawesome") format("svg"); 
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 300; }

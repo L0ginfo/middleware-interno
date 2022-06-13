@@ -1,0 +1,222 @@
+<style>
+	body {
+	    font-family:arial;
+	    font-size:10pt;
+	}
+	table td {
+	    width:7px;
+	}
+	table {
+	    border-collapse:collapse;
+	    border-spacing: 0px;
+	    font-size:9pt;
+	    width:700px
+	}
+	.td-border td,
+	.te_adicional th, 
+	.te_adicional td {
+	    border: 1px solid black;
+	    padding: 15px 7px;
+	}
+	.tr-title td {
+	    background-color:silver;
+	}
+	.my-table td {
+	    padding:3px;
+	    padding-bottom:6px;
+	    padding-top:1px;
+	    font-size:10pt;
+	}
+	hr { 
+	    display: block;
+	    margin-top: 0.4em;
+	    margin-bottom: 0.4em;
+	    margin-left: auto;
+	    margin-right: auto;
+	    border-style: inset;
+	    border-width: 2px;
+	}
+	img {
+	    width: 103px;
+	    height:87px;
+	    margin-top: 5px;
+	}
+</style>
+<?php
+function mask($val, $mask) {
+	$maskared = '';
+	$k = 0;
+	for ($i = 0; $i<=strlen($mask)-1; $i++) {
+		if ($mask[$i] == '#') {
+			if(isset($val[$k]))
+				$maskared .= $val[$k++];
+		} else {
+			if (isset($mask[$i]))
+				$maskared .= $mask[$i];
+		}
+	}
+	return $maskared;
+}
+function formataData ($formataData) {
+	$dataHora = implode("/", explode("-", $formataData ));
+	$dataHora = explode(" ", $dataHora);
+	$formato = array_reverse(explode("/", $dataHora[0]));
+	$hora = explode(".", $dataHora[1]);	
+	$data = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];
+	return $data;
+}
+?>
+<div style="width:100%;height:5px;">
+	<table style="table-layout: fixed;width:100%;">
+		<tr>
+			<td>
+				<center>
+					<img src="resources/logo002.png">
+				</center>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size:15pt;">
+				<b>
+					<center>TFA DE CONTAINER</center>
+				</b>
+			</td>
+		</tr>
+	</table>
+</div>
+<div style="background-color:#F60;width:100%;height:5px;"></div>
+<br>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;"><?= $this->razao ?></span></td>
+		<?php
+			date_default_timezone_set('America/Sao_Paulo');
+			$data_atual = date('d/m/Y H:i:s');
+		?>
+		<td colspan="50" align="right">
+			<span style="font-weight:bold;">Data Impressão do Termo: </span><?= $data_atual ?>
+		</td>
+	</tr>
+	<tr>
+		<?php
+			$cnpj = $this->cnpj;
+			$cnpj = mask($cnpj, '##.###.###/####-##');
+		?>
+		<td colspan="100"><span style="font-weight:bold;">CNPJ: </span><?= $cnpj  ?></td>
+	</tr>
+	<tr>
+		<td colspan="50"><span style="font-weight:bold;">UNIDADE: </span><?= $this->unidade ?></td>
+		<td colspan="50" align="right">
+			<span style="font-weight:bold;">N° do Termo: </span><?= $this->ter_inf ? $this->ter_inf : "---"; ?>
+		</td>
+	</tr>
+</table>
+<hr>
+<table>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;">Receita Federal:</span></td>
+	</tr>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;"></span><?= $this->alfandega ? $this->alfandega : "---"; ?></td>
+	</tr>
+	<tr>
+		<td colspan="100"><span style="font-weight:bold;"></span><?= $this->delegacia ? $this->delegacia : "---"; ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35" style="padding-right: 40px;"><span style="font-weight:bold;">ANO/DOC. ENTRADA N°</span></td>
+		<td colspan="35"><span style="font-weight:bold;">Repartição de Origem</span></td>
+		<?php
+			$formataData = $this->cesv_dt_chegada;
+			$cesv_dt_chegada = formataData($formataData); 
+		?>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Data/Hora Chegada Veículo: </span><?= $cesv_dt_chegada ?></td>
+	</tr>
+	<tr>
+		<td colspan="35"><?= $this->dent ?></td>
+		<td colspan="35"><?= $this->proc_nome ?></td>
+		<?php
+			$formataData = $this->cesv_dt_entrada;
+			$cesv_dt_entrada = formataData($formataData); 
+		?>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Data/Hora Entrada Veículo: </span><?= $cesv_dt_entrada ?></td>
+	</tr>
+	<tr>
+		<td colspan="35"></td>
+		<td colspan="35"></td>
+		<?php
+			$formataData = $this->os_dt_inicio;
+			$os_dt_inicio = formataData($formataData); 
+		?>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Data/Hora Início Operação: </span><?= $os_dt_inicio ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">Transportadora</span></td>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Container</span></td>
+	</tr>
+	<tr>
+		<td colspan="35"><?= $this->trans_nome ?></td>
+		<td colspan="35" align="right"><?= $this->cnt_id ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35" style="text-align: center; color: #696969;">
+			<?= "Recebemos os volumes, abaixo relacionados, neste armazen através do(s) veículo(s) discriminado(a) abaixo:"; ?>
+		</td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">Consignatário: </span><?= $this->cli_nome ?></td>
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">Tamanho do Container: </span><?= $this->cnt_tipo ?></td>
+	</tr>
+	<tr>
+		<td colspan="35"><span style="font-weight:bold;">Peso Tara: </span><?= $this->cnt_tara . " Kg"; ?></td>
+		<?php
+			$formataData = $this->ter_dt_geracao;
+			$ter_dt_geracao = formataData($formataData); 
+		?>
+		<td colspan="35" align="right"><span style="font-weight:bold;">Data de Geração: </span><?= $ter_dt_geracao ?></td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<tr>
+		<td colspan="35" style="text-align: center; color: #696969;">
+			<?= "Histórico: EMBALAGEM COM SINAL EXTERNO DE AVARIA, COM POSSIBILIDADE DE DANOS."; ?>
+		</td>
+	</tr>
+</table>
+<hr>
+<table style="table-layout:fixed;width:100%;">
+	<?php foreach ($this->teste as $i => $item) { ?>
+		<?php if ($item['PCNT_ID']): ?>
+			<?php $pcnt = $item['PCNT_ID'] . " " . $item['PCNT_DESCRICAO']; ?>
+		<?php endif ?>
+		<tr>
+			<td colspan="100" style="font-weight:bold;"><?= $pcnt ?></td>
+		</tr>
+		<tr>
+			<td colspan="100">
+				<?php $desc_avarias = $this->desc_avarias; ?>
+				<?php if ($desc_avarias[$i]['avpc_id'] == $item['AVPC_ID']) { ?>
+				 <!-- echo $desc_avarias[$i]['avpc_id'] . ' ) ';  -->
+					<?php foreach ($desc_avarias[$i]['desc_avarias'] as $desc_avaria) { ?>
+						<?php echo $desc_avaria['AVA_DESCRICAO'] . '<br> '; ?>
+					<?php } ?>
+				<?php } ?>
+			</td>
+		</tr>
+	<?php } ?>
+</table>
+<hr>

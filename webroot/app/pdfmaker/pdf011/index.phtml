@@ -1,0 +1,203 @@
+<style>
+	body {
+	    font-family:arial;
+	    font-size:10pt;
+	}
+	table td {
+	    width:7px;
+	}
+	table {
+	    border-collapse:collapse;
+	    border-spacing: 0px;
+	    font-size:9pt;
+	    width:700px
+	}
+	.td-border td,
+	.te_adicional th, 
+	.te_adicional td {
+	    border: 1px solid black;
+	    padding: 15px 7px;
+	}
+	.tr-title td {
+	    background-color:silver;
+	}
+	.my-table td {
+	    padding:3px;
+	    padding-bottom:6px;
+	    padding-top:1px;
+	    font-size:10pt;
+	}
+	hr { 
+	    display: block;
+	    margin-top: 0.4em;
+	    margin-bottom: 0.4em;
+	    margin-left: auto;
+	    margin-right: auto;
+	    border-style: inset;
+	    border-width: 2px;
+	}
+	img {
+	    width: 103px;
+	    height:87px;
+	    margin-top: 5px;
+	}
+</style>
+<?php
+function mask($val, $mask) {
+	$maskared = '';
+	$k = 0;
+	for ($i = 0; $i<=strlen($mask)-1; $i++) {
+		if ($mask[$i] == '#') {
+			if(isset($val[$k]))
+				$maskared .= $val[$k++];
+		} else {
+			if (isset($mask[$i]))
+				$maskared .= $mask[$i];
+		}
+	}
+	return $maskared;
+}
+function formataData ($formataData) {
+	$dataHora = implode("/", explode("-", $formataData ));
+	$dataHora = explode(" ", $dataHora);
+	$formato = array_reverse(explode("/", $dataHora[0]));
+	$hora = explode(".", $dataHora[1]);	
+	$data = $formato[0] . "/" . $formato[1] . "/" . $formato[2] . "  " . $hora[0];
+	return $data;
+}
+?>
+<div style="width:100%;height:5px;">
+	<table style="table-layout: fixed;width:100%;">
+		<tr>
+			<td>
+				<center>
+					<img src="resources/logo002.png">
+				</center>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size:15pt;">
+				<b>
+					<center>Informações da Atracação</center>
+				</b>
+			</td>
+		</tr>
+	</table>
+</div>
+<div style="background-color:#F60;width:100%;height:5px;"></div>
+<br>
+<?php 
+    if ($this->VEICULO) {
+        $peso_bruto_total = 0;
+        foreach ($this->VEICULO as $v) { 
+            $peso_bruto_total += $v["PESO_BRUTO"];
+            $total_cesv_relacionadas++; 
+        }
+    }
+?>
+<table style="table-layout:fixed;width:100%;">
+	<?php foreach ($this->INFORMACOES as $r) { ?>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;">Viagem:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Atracação:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Cesv:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Operação:</span></td>
+		</tr>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['VGM_NUMERO'] ? $r['VGM_NUMERO'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['ATRACACAO'] ? $r['ATRACACAO'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['CESV_ID'] ? $r['CESV_ID'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['OP_DESCRICAO'] ? $r['OP_DESCRICAO'] : "---"; ?></td>
+		</tr>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;">IMO:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Nome Navio:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Situação:</span></td>
+		</tr>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['VEI_ID'] ? $r['VEI_ID'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['NAV_N2'] ? $r['NAV_N2'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['EVE_DESC'] ? $r['EVE_DESC'] : "---"; ?></td>
+		</tr>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;">Data Cadastro:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Data Chegada:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Data Saída:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Faturamento:</span></td>
+		</tr>
+		<tr>
+			<?php
+				if ($r['PROG_DT_CADASTRO']) {
+					$formataData = $r['PROG_DT_CADASTRO'];
+					$PROG_DT_CADASTRO = formataData($formataData);
+				}
+			?>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $PROG_DT_CADASTRO ? $PROG_DT_CADASTRO : "---"; ?></td>
+			<?php
+				if ($r['PROG_DT_CHEGADA']) {
+					$formataData = $r['PROG_DT_CHEGADA'];
+					$PROG_DT_CHEGADA = formataData($formataData);
+				}
+			?>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $PROG_DT_CHEGADA ? $PROG_DT_CHEGADA : "---"; ?></td>
+			<?php
+				if ($r['PROG_DT_SAIDA']) {
+					$formataData = $r['PROG_DT_SAIDA'];
+					$PROG_DT_SAIDA = formataData($formataData);
+				}
+			?>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $PROG_DT_SAIDA ? $PROG_DT_SAIDA : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $r['FATURAMENTO'] ? $r['FATURAMENTO'] : "---"; ?></td>
+		</tr>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;">Peso Bruto Total:</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Total de Veículos:</span></td>
+		</tr>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $peso_bruto_total ? $peso_bruto_total . " Kg" : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $total_cesv_relacionadas ? $total_cesv_relacionadas : "---"; ?></td>
+		</tr>
+	<?php } ?>
+</table>
+<h2 align="center">Veiculos Adicionados</h2>
+<table style="table-layout:fixed;width:100%;">
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;">Cesv</span></td>
+			<td colspan="25"><span style="font-weight:bold;">P. Veículo</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Operação</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Motorista</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Entrada</span></td>
+			<td colspan="25"><span style="font-weight:bold;">Saída</span></td>
+			<td colspan="25" align="right"><span style="font-weight:bold;">P. Bruto</span></td>
+		</tr>
+	<?php $i = 0; ?>
+	<?php foreach ($this->VEICULO as $v) { ?>
+		<?php $i++; ?>
+		<tr>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $v['CESV_ID'] ? $v['CESV_ID'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $v['VEI_ID'] ? $v['VEI_ID'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $v['OP_DESCRICAO'] ? $v['OP_DESCRICAO'] : "---"; ?></td>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $v['PES_NOME'] ? $v['PES_NOME'] : "---"; ?></td>
+			<?php
+				if ($v['CESV_DT_ENTRADA']) {
+					$formataData = $v['CESV_DT_ENTRADA'];
+					$CESV_DT_ENTRADA = formataData($formataData);
+				}
+			?>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $CESV_DT_ENTRADA ? $CESV_DT_ENTRADA : "---"; ?></td>
+			<?php
+				if ($v['CESV_DT_SAIDA']) {
+					$formataData = $v['CESV_DT_SAIDA'];
+					$CESV_DT_SAIDA = formataData($formataData);
+				}
+			?>
+			<td colspan="25"><span style="font-weight:bold;"></span><?= $CESV_DT_SAIDA ? $CESV_DT_SAIDA : "---"; ?></td>
+			<?php
+				$peso_bruto = explode(".", $v['PESO_BRUTO']);
+
+			?>
+			<td colspan="25" align="right"><span style="font-weight:bold;"></span><?= $peso_bruto[0] ? $peso_bruto[0] . " Kg" : "---"; ?></td>
+		</tr>	
+		<br>
+	<?php } ?>
+</table>

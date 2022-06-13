@@ -1,0 +1,23 @@
+.btn-group.bootstrap-select {
+
+    .dropdown-menu.inner {
+
+        li {
+            border-top: 1px solid #ece9e9;
+
+            &:not(.dropdown-header):nth-child(odd) {
+                color: #262626;
+                background-color: #f5f5f580;
+            }
+
+            a {
+                padding: 8px 17px;
+
+                &:hover, 
+                &:focus {
+                    background-color: #d0d0d0;
+                } 
+            }
+        }
+    }
+}
